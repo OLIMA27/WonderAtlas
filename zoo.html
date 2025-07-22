@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WonderAtlas</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+    <!--Zoo-->
+
+    <div class="zoo">
+        <h1>Family-Friendly Zoos and Animal Parks in Tamil Nadu</h1>
+    </div>
+
+
+<div class="zoo-list">
+
+    <div class="zoo-card" onclick="showZooDetails('vandalur')">
+        <img src="ASSETS2/vandalurzoo.jpg" alt="Vandalur Zoo"><br><br>
+        <h3>Arignar Anna Zoological Park</h3>
+        <p>Vandalur, Chennai</p><br>
+    </div>
+
+    <div class="zoo-card" onclick="showZooDetails('crocodilebank')">
+        <img src="ASSETS/crocodilebankzoo.jpg" alt="Crocodile Bank"><br><br>
+        <h3>Madras Crocodile Bank</h3>
+        <p>Near Mahabalipuram</p><br>
+    </div>
+
+    <div class="zoo-card" onclick="showZooDetails('amirthi')">
+        <img src="ASSETS/amirthizoo.jpg" alt="Amirthi Zoological Park"><br><br>
+        <h3>Amirthi Zoological Park</h3>
+        <p>Vellore</p><br>
+    </div>
+
+    <div class="zoo-card" onclick="showZooDetails('voczoo')">
+    <img src="ASSETS2/voxzoo.jpg" alt="VOC Park and Zoo"><br><br>
+    <h3>VOC Park and Zoo</h3>
+    <p>Coimbatore</p><br>
+</div>
+
+
+    <div class="zoo-card" onclick="showZooDetails('mudumalai')">
+        <img src="ASSETS1/mundanthuraizoo.jpg" alt="Mudumalai Wildlife Sanctuary"><br><br>
+        <h3>Mudumalai Wildlife Sanctuary</h3>
+        <p>The Nilgiris</p><br>
+    </div>
+
+    <div class="zoo-card" onclick="showZooDetails('anamalai')">
+        <img src="ASSETS/annamalaizoo.jpg" alt="Anamalai Tiger Reserve"><br><br>
+        <h3>Anamalai Tiger Reserve</h3>
+        <p>Pollachi, Coimbatore</p><br>
+    </div>
+
+    <div class="zoo-card" style="margin-left: 40%;" onclick="showZooDetails('vallanadu')">
+        <img src="ASSETS2/vallanaduzoo.jpg" alt="Vallanadu Sanctuary"><br><br>
+        <h3>Vallanadu Blackbuck Sanctuary</h3>
+        <p>Thoothukudi</p><br>
+    </div>
+
+</div>
+
+<div class="popup1" id="popup">
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+<div class="overlay1" id="overlay" onclick="closePopup()"></div>
+<script>
+ function showPopup(contentHTML) {
+  document.getElementById("popup-content").innerHTML = contentHTML;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+   document.body.style.overflow = "hidden";
+}
+
+function closepopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+
+const zoos ={
+    vandalur: {
+  name: "Arignar Anna Zoological Park",
+  about: `
+    <h3>About</h3>
+    <p>One of South Asia's largest zoos, home to over 2,600 species, offering safari rides and eco-friendly enclosures.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Lion and Deer Safari</p>
+    <p>2. Aquarium, Butterfly House, and Amphibian Center</p>
+    <p>3. Battery-operated vehicle rides and cycles</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Vandalur, Chennai</p>
+    <p><strong>Timing:</strong> 9:00 AM - 5:00 PM (Closed on Tuesdays)</p>
+    <p><strong>Entry Fee:</strong> ₹50 (Adults), ₹20 (Children), Extra for Safari & Battery Car</p>
+  `
+},
+crocodilebank: {
+  name: "Madras Crocodile Bank Trust",
+  about: `
+    <h3>About</h3>
+    <p>A reptile zoo and research center housing crocodiles, alligators, turtles, and snakes in naturalistic enclosures.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. 17 species of crocodilians</p>
+    <p>2. Night Safari (on weekends)</p>
+    <p>3. Snake Park and Turtle conservation zone</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Mahabalipuram Road, Chennai</p>
+    <p><strong>Timing:</strong> 9:00 AM – 5:30 PM (Closed on Mondays)</p>
+    <p><strong>Entry Fee:</strong> ₹100 (Adults), ₹50 (Children), Night Safari extra</p>
+  `
+},
+amirthi: {
+  name: "Amirthi Zoological Park",
+  about: `
+    <h3>About</h3>
+    <p>A small, forested zoo located near the Amirthi River, ideal for short treks and seeing animals in a semi-wild environment.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Peacocks, deer, crocodiles</p>
+    <p>2. Waterfalls and trekking trails</p>
+    <p>3. Family picnic spots</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Vellore District, Tamil Nadu</p>
+    <p><strong>Timing:</strong> 8:00 AM – 5:00 PM</p>
+    <p><strong>Entry Fee:</strong> ₹10 – ₹20 approx</p>
+  `
+},
+voczoo: {
+  name: "VOC Park and Zoo",
+  about: `
+    <h3>About</h3>
+    <p>A children’s park with a small zoo, play areas, and mini aquarium, popular with local families and school kids.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Playgrounds and toy train</p>
+    <p>2. Birds, reptiles, and small mammals</p>
+    <p>3. Aquarium and Science Park nearby</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Coimbatore City, Tamil Nadu</p>
+    <p><strong>Timing:</strong> 10:00 AM – 5:00 PM</p>
+    <p><strong>Entry Fee:</strong> ₹5 – ₹10</p>
+  `
+},
+mudumalai: {
+  name: "Mudumalai Wildlife Sanctuary",
+  about: `
+    <h3>About</h3>
+    <p>A protected tiger reserve and forest with elephants, deer, panthers, and rich birdlife, located in the Nilgiris.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Jeep Safari through core forest areas</p>
+    <p>2. Moyar River viewpoint</p>
+    <p>3. Theppakadu Elephant Camp</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Nilgiri District, Tamil Nadu</p>
+    <p><strong>Timing:</strong> 7:00 AM – 10:00 AM, 3:00 PM – 6:00 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (entry), ₹340 (Jeep Safari approx)</p>
+  `
+},
+anamalai: {
+  name: "Anamalai Tiger Reserve",
+  about: `
+    <h3>About</h3>
+    <p>A large reserve near Pollachi famous for elephants, tigers, gaurs, and scenic eco-tourism spots like Topslip and Parambikulam.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Safari Rides and Eco Lodges</p>
+    <p>2. Trekking, birdwatching</p>
+    <p>3. Indigenous tribal culture exposure</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Pollachi, Coimbatore District</p>
+    <p><strong>Timing:</strong> 6:00 AM – 6:00 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (Adults), ₹10 (Children), Safari extra</p>
+  `
+},
+vallanadu: {
+  name: "Vallanadu Blackbuck Sanctuary",
+  about: `
+    <h3>About</h3>
+    <p>A protected sanctuary specifically created for conserving endangered blackbucks, located near Thoothukudi.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Large herds of blackbuck antelope</p>
+    <p>2. Dry scrub forest ecosystem</p>
+    <p>3. Restricted access to maintain ecological balance</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Vallanadu, Thoothukudi District</p>
+    <p><strong>Timing:</strong> Prior permission required for entry</p>
+    <p><strong>Entry Fee:</strong> Free (with forest department approval)</p>
+  `
+}
+}
+
+
+
+
+function showZooDetails(zooId) {
+  const zoo = zoos[zooId];
+  if (zoo) {
+    const content = `
+      <h1>${zoo.name}</h1>
+      ${zoo.about}
+      ${zoo.highlights}
+      ${zoo.info}
+    `;
+    showPopup(content);
+  } else {
+    alert("Hillstation details not found!");
+  }
+}
+</script>
+
+
+
+<script src="place.js"></script>
+</body>
+</html>

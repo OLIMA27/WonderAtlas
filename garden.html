@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+
+    <!--Garden-->
+
+   <div class="garden">
+    <h1>Peaceful Gardens and Green Spaces in Tamil Nadu</h1>
+   </div>
+
+<div class="garden-list">
+
+    <div class="garden-card" onclick="showGardenDetails('botanicalGarden')">
+        <img src="ASSETS/botanical.jpg" alt="Botanical Garden"><br><br>
+        <h3>Government Botanical Garden</h3>
+        <p>Ooty</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('simsPark')">
+        <img src="ASSETS2/sims.jpg" alt="Sim's Park"><br><br>
+        <h3>Sim's Park</h3>
+        <p>Coonoor</p><br>
+    </div>
+ 
+    <div class="garden-card" onclick="showGardenDetails('bryantPark')">
+        <img src="ASSETS/bryant.jpg" alt="Bryant Park"><br><br>
+        <h3>Bryant Park</h3>
+        <p>Kodaikanal</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('towerPark')">
+        <img src="ASSETS/annatowerpark.jpg" alt="Anna Nagar Tower Park"><br><br>
+        <h3>Anna Nagar Tower Park</h3>
+        <p>Chennai</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('semmozhi')">
+        <img src="ASSETS2/semmozhi.jpg" alt="Semmozhi Poonga"><br><br>
+        <h3>Semmozhi Poonga</h3>
+        <p>Chennai</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('childrensPark')">
+        <img src="ASSETS/childrenspark.jpg" alt="Children's Park Guindy"><br><br>
+        <h3>Children's Park</h3>
+        <p>Guindy, Chennai</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('vocPark')">
+        <img src="ASSETS2/vocpark.jpg" alt="VOC Park"><br><br>
+        <h3>VOC Park and Zoo</h3>
+        <p>Coimbatore</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('jeevaPark')">
+        <img src="ASSETS/jeevapark.jpg" alt="Jeeva Park"><br><br>
+        <h3>Jeeva Park</h3>
+        <p>T. Nagar, Chennai</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('tholkappiaPoonga')">
+        <img src="ASSETS2/tholkappai.jpg" alt="Tholkappia Poonga"><br><br>
+        <h3>Tholkappia Poonga (Eco Park)</h3>
+        <p>Adyar, Chennai</p><br>
+    </div>
+
+    <div class="garden-card" onclick="showGardenDetails('roseGarden')">
+        <img src="ASSETS2/rosegarden.jpg" alt="Rose Garden"><br><br>
+        <h3>Rose Garden</h3>
+        <p>Ooty</p><br>
+    </div>
+</div>
+
+
+
+<div class="popup1" id="popup">
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+<div class="overlay1" id="overlay" onclick="closePopup()"></div>
+<script>
+ function showPopup(contentHTML) {
+  document.getElementById("popup-content").innerHTML = contentHTML;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+   document.body.style.overflow = "hidden";
+}
+
+function closepopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+const gardens = {
+
+    botanicalGarden: {
+  name: "Government Botanical Garden",
+  about: `
+    <h3>About</h3>
+    <p>Located in Ooty, this 55-acre garden is maintained by the Tamil Nadu Horticulture Department and is a popular tourist attraction.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. 20 million-year-old fossil tree</p>
+    <p>2. Thousands of exotic and indigenous plant species</p>
+    <p>3. Annual flower show in May</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Udhagamandalam (Ooty), Tamil Nadu</p>
+    <p><strong>Timing:</strong> 7 AM – 6:30 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (Adults), ₹15 (Children)</p>
+  `
+}
+,
+semmozhi: {
+  name: "Semmozhi Poonga",
+  about: `
+    <h3>About</h3>
+    <p>Semmozhi Poonga is a beautifully maintained botanical garden in Chennai, known for its peaceful atmosphere and rich plant diversity.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Over 500 species of plants and trees</p>
+    <p>2. Landscaped gardens and herbal zones</p>
+    <p>3. Walking paths, fountains, and children's play area</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Cathedral Road, Teynampet, Chennai</p>
+    <p><strong>Timing:</strong> 10 AM – 6:30 PM (Closed on Tuesdays)</p>
+    <p><strong>Entry Fee:</strong> ₹15 for Adults, ₹10 for Children</p>
+  `
+},
+
+simsPark: {
+  name: "Sim's Park",
+  about: `
+    <h3>About</h3>
+    <p>Sim’s Park is a unique botanical garden in Coonoor that combines natural beauty and man-made landscaping across a deep ravine.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Over 1,000 species of plants</p>
+    <p>2. Annual fruit and vegetable show</p>
+    <p>3. Scenic lake and boating</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Coonoor, Nilgiris District</p>
+    <p><strong>Timing:</strong> 9 AM – 6 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (Adults), ₹15 (Children)</p>
+  `
+}
+,
+bryantPark: {
+  name: "Bryant Park",
+  about: `
+    <h3>About</h3>
+    <p>Bryant Park is a well-maintained botanical garden situated next to Kodaikanal Lake and is known for its beautiful flowers and glasshouse.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Over 325 species of trees and shrubs</p>
+    <p>2. Annual flower show in May</p>
+    <p>3. Glasshouse with exotic flowers</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Kodaikanal, Tamil Nadu</p>
+    <p><strong>Timing:</strong> 9 AM – 6 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (Adults), ₹15 (Children)</p>
+  `
+},
+towerPark: {
+  name: "Anna Nagar Tower Park",
+  about: `
+    <h3>About</h3>
+    <p>Also called Visveswaraya Park, this large urban park is known for its iconic tower and greenery amidst a busy city.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. 135 ft tall tower (temporarily closed)</p>
+    <p>2. Walking/jogging tracks</p>
+    <p>3. Children's play area and fountains</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Anna Nagar, Chennai</p>
+    <p><strong>Timing:</strong> 6 AM – 11 AM & 4 PM – 8 PM</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+childrensPark: {
+  name: "Guindy Children's Park",
+  about: `
+    <h3>About</h3>
+    <p>This is a zoological and recreational park for children located inside Guindy National Park premises.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Mini-zoo with animals and birds</p>
+    <p>2. Toy train and play area</p>
+    <p>3. Snake park nearby</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Guindy, Chennai</p>
+    <p><strong>Timing:</strong> 9 AM – 5:30 PM (Closed on Tuesdays)</p>
+    <p><strong>Entry Fee:</strong> ₹20 (Adults), ₹5 (Children)</p>
+  `
+},
+vocPark: {
+  name: "VOC Park and Zoo",
+  about: `
+    <h3>About</h3>
+    <p>VOC Park and Zoo is a popular destination in Coimbatore offering both recreational facilities and a small zoo.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Playgrounds and children’s rides</p>
+    <p>2. Small zoo with animals and birds</p>
+    <p>3. Toy train and aquarium</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Gopalapuram, Coimbatore</p>
+    <p><strong>Timing:</strong> 10 AM – 7 PM</p>
+    <p><strong>Entry Fee:</strong> ₹10 (Adults), ₹5 (Children)</p>
+  `
+},
+jeevaPark: {
+  name: "Jeeva Park",
+  about: `
+    <h3>About</h3>
+    <p>Jeeva Park is a serene neighborhood park in T. Nagar, popular for morning walks and relaxation.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Green lawns and shaded trees</p>
+    <p>2. Walking and jogging tracks</p>
+    <p>3. Open gym and benches</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> T. Nagar, Chennai</p>
+    <p><strong>Timing:</strong> 5 AM – 9 AM & 4 PM – 8 PM</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+tholkappiaPoonga: {
+  name: "Tholkappia Poonga",
+  about: `
+    <h3>About</h3>
+    <p>Also known as Adyar Eco Park, it is an ecological restoration project near the Adyar River estuary and is not open to casual public visits.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. 58-acre eco-restoration zone</p>
+    <p>2. Mangroves, birds, and native species</p>
+    <p>3. Guided tours for researchers and institutions</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Adyar Estuary, Chennai</p>
+    <p><strong>Timing:</strong> Visits only through permission</p>
+    <p><strong>Entry Fee:</strong> Not open for general public</p>
+  `
+},
+roseGarden: {
+  name: "Government Rose Garden",
+  about: `
+    <h3>About</h3>
+    <p>This sprawling garden on the slopes of Elk Hill in Ooty is home to more than 20,000 varieties of roses.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. India's largest collection of roses</p>
+    <p>2. Terraced layout across the hill</p>
+    <p>3. Scenic viewpoints and photo spots</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Ooty, Tamil Nadu</p>
+    <p><strong>Timing:</strong> 7 AM – 6:30 PM</p>
+    <p><strong>Entry Fee:</strong> ₹30 (Adults), ₹15 (Children)</p>
+  `
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+function showGardenDetails(gardenId) {
+  const garden = gardens[gardenId];
+  if (garden) {
+    const content = `
+      <h1>${garden.name}</h1>
+      ${garden.about}
+      ${garden.highlights}
+      ${garden.info}
+    `;
+    showPopup(content);
+  } else {
+    alert("Garden details not found!");
+  }
+}
+
+</script>
+
+    <script src="place.js"></script>
+
+</body>
+</html>

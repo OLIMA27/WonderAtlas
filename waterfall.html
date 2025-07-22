@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waterfall</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+<div class="waterfall">
+    <h1>Top Scenic Waterfalls in Tamil Nadu</h1>
+</div>
+
+    <div class="waterfall-list">
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('courtallam')">
+            <img src="ASSETS/courtallamfall.jpg" alt="Courtallam Falls"><br><br>
+            <h3>Courtallam Falls</h3>
+            <p>Tenkasi</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('hogenakkal')">
+            <img src="ASSETS/hognekkalfall.jpg" alt="Hogenakkal Falls"><br><br>
+            <h3>Hogenakkal Falls</h3>
+            <p>Dharmapuri</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('agaya_gangai')">
+            <img src="ASSETS/aagayafall.jpg" alt="Agaya Gangai Falls"><br><br>
+            <h3>Agaya Gangai Falls</h3>
+            <p>Namakkal district</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('suruli')">
+            <img src="ASSETS2/suruli.jpg" alt="Suruli Falls"><br><br>
+            <h3>Suruli Falls</h3>
+            <p>Theni</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('thirparappu')">
+            <img src="ASSETS2/tiparappu.jpg" alt="Thirparappu Falls"><br><br>
+            <h3>Thirparappu Falls</h3>
+            <p>Kanyakumari</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('panchalinga')">
+            <img src="ASSETS2/panchaillingafall.jpg" alt="Panchalinga Falls"><br><br>
+            <h3>Panchalinga Falls</h3>
+            <p>Hogenakkal, Dharmapuri</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('catherine')">
+            <img src="ASSETS/catherinefall.jpg" alt="Catherine Falls"><br><br>
+            <h3>Catherine Falls</h3>
+            <p>Kotagiri in the Nilgiris</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('monkey')">
+            <img src="ASSETS1/monkeyfall.jpg" alt="Monkey Falls"><br><br>
+            <h3>Monkey Falls</h3>
+            <p>Pollachi</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('vaidehi')">
+            <img src="ASSETS2/vaidehifall.jpg" alt="Vaidehi Falls"><br><br>
+            <h3>Vaidehi Falls</h3>
+            <p>Coimbatore</p><br>
+        </div>
+
+        <div class="waterfall-card" onclick="showWaterfallDetails('bearshola')">
+            <img src="ASSETS/bearsholafall.jpg" alt="Bear Shola Falls"><br><br>
+            <h3>Bear Shola Falls</h3>
+            <p> Kodaikanal, Dindigul District</p><br>
+        </div>
+
+    </div>
+
+<!-- Popup HTML -->
+<div class="popup1" id="popup">
+  <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+
+<div class="overlay1" id="overlay" onclick="closepopup()"></div>
+
+<script>
+  function showPopup(contentHTML) {
+    document.getElementById("popup-content").innerHTML = contentHTML;
+    document.getElementById("popup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closepopup() {
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+
+  const waterfalls = {
+    courtallam: {
+      name: "Courtallam Falls",
+      about: `
+        <h3>About</h3>
+        <p>Known as the 'Spa of South India', Courtallam Falls is famous for its medicinal waters and scenic surroundings.</p>
+      `,
+      highlights: `
+        <h3>Highlights</h3>
+        <p>1. Nine falls including Main Falls, Five Falls, and Tiger Falls</p>
+        <p>2. Surrounded by lush greenery and hills</p>
+        <p>3. Popular monsoon destination</p>
+      `,
+      info: `
+        <h3>Visitor Info</h3>
+        <p><strong>Location:</strong> Tenkasi district</p>
+        <p><strong>Best Time to Visit:</strong> June to September</p>
+        <p><strong>Entry Fee:</strong> Free</p>
+      `
+    },
+    hogenakkal: {
+  name: "Hogenakkal Falls",
+  about: `
+    <h3>About</h3>
+    <p>Hogenakkal, often called the 'Niagara of India', is known for its roaring waters, boat rides, and oil massages.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Coracle (basket) boat rides</p>
+    <p>2. Dense forests and rugged rocks</p>
+    <p>3. Popular filming location</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Dharmapuri district</p>
+    <p><strong>Best Time to Visit:</strong> July to October</p>
+    <p><strong>Entry Fee:</strong> ₹10 (Boat ride extra)</p>
+  `
+},
+agaya_gangai: {
+  name: "Agaya Gangai Falls",
+  about: `
+    <h3>About</h3>
+    <p>This beautiful waterfall is hidden in the Kolli Hills and requires a descent of over 1,000 steps to reach.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Located near the Arapaleeswarar Temple</p>
+    <p>2. Tall, narrow stream amidst dense forest</p>
+    <p>3. Serene trekking destination</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Namakkal district</p>
+    <p><strong>Best Time to Visit:</strong> July to October</p>
+    <p><strong>Entry Fee:</strong> ₹20</p>
+  `
+},
+suruli: {
+  name: "Suruli Falls",
+  about: `
+    <h3>About</h3>
+    <p>A beautiful two-stage waterfall surrounded by thick forests and hills, often visited by pilgrims to nearby temples.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. 150 feet high waterfall</p>
+    <p>2. Caves with inscriptions nearby</p>
+    <p>3. Located near Kumbakkarai Falls</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Theni district</p>
+    <p><strong>Best Time to Visit:</strong> June to October</p>
+    <p><strong>Entry Fee:</strong> ₹10</p>
+  `
+},
+thirparappu: {
+  name: "Thirparappu Falls",
+  about: `
+    <h3>About</h3>
+    <p>This man-made waterfall over the Kodayar River is a family-friendly picnic spot with a nearby temple.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Safe bathing area</p>
+    <p>2. Boating and children’s park nearby</p>
+    <p>3. Mahadevar Temple just beside the falls</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Kanyakumari district</p>
+    <p><strong>Best Time to Visit:</strong> September to February</p>
+    <p><strong>Entry Fee:</strong> ₹5</p>
+  `
+},
+panchalinga: {
+  name: "Panchalinga Falls",
+  about: `
+    <h3>About</h3>
+    <p>Panchalinga Falls is a beautiful and serene waterfall located in the dense forests near Dharmapuri. It is named after the five natural Shiva Lingams found nearby.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Five natural rock formations shaped like Shiva Lingams</p>
+    <p>2. Secluded and perfect for nature lovers</p>
+    <p>3. Requires a short trek through forest trails</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Near Hogenakkal, Dharmapuri district</p>
+    <p><strong>Best Time to Visit:</strong> October to February</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+catherine: {
+  name: "Catherine Falls",
+  about: `
+    <h3>About</h3>
+    <p>Catherine Falls is a scenic double-cascaded waterfall located in the Nilgiris. It's one of the most picturesque falls in the region, surrounded by tea plantations.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Tall, double-drop waterfall</p>
+    <p>2. Viewpoint offers breathtaking panoramic views</p>
+    <p>3. Near Kotagiri in the Nilgiris</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Kotagiri, Nilgiris district</p>
+    <p><strong>Best Time to Visit:</strong> July to September</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+monkey: {
+  name: "Monkey Falls",
+  about: `
+    <h3>About</h3>
+    <p>Monkey Falls is a refreshing and easily accessible waterfall near Pollachi, often visited by locals and tourists alike.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Waterfall right beside the road</p>
+    <p>2. Surrounded by thick forest and monkeys</p>
+    <p>3. Safe and enjoyable during the rainy season</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Near Aliyar Dam, Pollachi</p>
+    <p><strong>Best Time to Visit:</strong> October to March</p>
+    <p><strong>Entry Fee:</strong> ₹20</p>
+  `
+},
+vaidehi: {
+  name: "Vaidehi Falls",
+  about: `
+    <h3>About</h3>
+    <p>Vaidehi Falls is a lesser-known but peaceful waterfall near Coimbatore, known for its clean water and lush green setting.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Located inside forest reserve – permission required</p>
+    <p>2. Calm, natural pool formed by the falls</p>
+    <p>3. Great spot for photography and trekking</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Near Narasipuram, Coimbatore district</p>
+    <p><strong>Best Time to Visit:</strong> September to January</p>
+    <p><strong>Entry Fee:</strong> Permission from Forest Dept needed</p>
+  `
+},
+bearshola: {
+  name: "Bear Shola Falls",
+  about: `
+    <h3>About</h3>
+    <p>Bear Shola Falls is a seasonal waterfall named after bears that once visited here to drink water. It's now a popular picnic spot in Kodaikanal.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Located inside a peaceful reserve forest</p>
+    <p>2. Surrounded by tall trees and wildlife</p>
+    <p>3. Best visited right after the monsoon</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Kodaikanal, Dindigul district</p>
+    <p><strong>Best Time to Visit:</strong> August to October</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+}
+
+
+
+
+  };
+
+  function showWaterfallDetails(waterfallId) {
+    const data = waterfalls[waterfallId]; 
+    if (data) {
+      const content = `
+        <h1>${data.name}</h1>
+        ${data.about}
+        ${data.highlights}
+        ${data.info}
+      `;
+      showPopup(content);
+    } else {
+      alert("Waterfall data not found.");
+    }
+  }
+</script>
+
+
+
+
+
+    <script src="place.js"></script>
+</body>
+
+</html>

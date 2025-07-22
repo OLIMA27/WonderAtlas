@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beach</title>
+  <link rel="stylesheet" href="place.css">
+  <!--Font Awesome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--Navbar-->
+  <div class="container1">
+    <div class="header">
+      <h1>WonderAtlas</h1>
+    </div>
+    <div class="nav">
+      <p class="nav-links"><a href="index.html">Home</a></p>
+      <p class="nav-links"><a href="explore.html">Explore</a></p>
+      <p class="nav-links"><a href="temple.html">Categories</a></p>
+      <p class="nav-links"><a href="">Contact</a></p>
+    </div>
+    <div class="toggle" onclick="opentoggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!--Side navbar-->
+  <div class="sidenav" id="sidebar">
+    <div class="closetoggle" onclick="closedtoggle()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="side-nav">
+      <p class="sidenav-links"><a href="index.html">Home</a></p>
+      <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+      <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+      <p class="sidenav-links"><a href="">Contact</a></p>
+    </div>
+  </div>
+
+  <!--Beaches-->
+  <div class="beach">
+    <h1>Top Beach Getaways in Tamil Nadu </h1>
+  </div>
+
+  <div class="beach-list">
+    <div class="beach-card" onclick="showBeachDetails('marina')">
+      <img src="ASSETS/beach.jpg" alt="Marina Beach"><br><br>
+      <h3>Marina Beach</h3>
+      <p>Chennai</p><br>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('elliot')">
+      <img src="ASSETS/besant beach.jpg" alt="Elliot's Beach"><br><br>
+      <h3>Elliot's Beach</h3>
+      <p>Besant Nagar</p><br>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('mahabalipuram')">
+      <img src="ASSETS1/mahaballipuram beach.jpg" alt="Mahabalipuram"><br><br>
+      <h3>Mahabalipuram Beach</h3>
+      <p>Mahabalipuram</p><br>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('kanyakumari')">
+      <img src="ASSETS1/Kaniyakumari beach.jpg" alt="Kanyakumari Beach"><br><br>
+      <h3>Kanyakumari Beach</h3>
+      <p>Kaniyakumari</p><br>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('rameswaram')">
+      <img src="ASSETS2/rameswaram beaach.jpg" alt="Rameswaram Beach">
+      <h3>Rameswaram Beach</h3>
+      <p>Ramanathapuram</p>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('thiruchendur')">
+      <img src="ASSETS2/thiruchendur beach.jpg" alt="Thiruchendur Beach"><br><br>
+      <h3>Thiruchendur Beach</h3>
+      <p>Thoothukudi</p><br>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('silver')">
+      <img src="ASSETS2/silver beach.jpg" alt="Silver Beach"><br><br>
+      <h3>Silver Beach</h3>
+      <p>Cuddalore</p><br>
+    </div>
+
+
+    <div class="beach-card" onclick="showBeachDetails('sothavilai')">
+      <img src="ASSETS2/sothvilai beach.jpg" alt="Sothavilai Beach"><br><br>
+      <h3>Sothavilai Beach</h3>
+      <p>Kanyakumari</p><br>
+    </div>
+
+
+
+    <div class="beach-card" onclick="showBeachDetails('dhanushkodi')">
+      <img src="ASSETS/dhanuskodi beach.jpg" alt="Dhanushkodi Beach"><br><br>
+      <div class="beach-content">
+        <h3>Dhanushkodi Beach</h3>
+        <p>Rameswaram</p><br>
+      </div>
+    </div>
+
+    <div class="beach-card" onclick="showBeachDetails('velankanni')">
+      <img src="ASSETS2/vellankani beach.jpg" alt="Velankanni Beach"><br><br>
+      <h3>Velankanni Beach</h3>
+      <p>Nagapattinam</p><br>
+    </div>
+  </div>
+
+   <div class="overlay1" id="overlay" onclick="closePopup()"></div>
+
+
+<div class="popup1" id="popup">
+  <!-- <button class="close-btn" onclick="closePopup()">X</button> -->
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+
+
+
+  <script>
+
+
+    function showPopup(contentHTML) {
+      document.getElementById("popup-content").innerHTML = contentHTML;
+      document.getElementById("popup").style.display = "block";
+      document.getElementById("overlay").style.display = "block";
+    }
+
+    function closepopup() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+
+    const beaches = {
+      marina: {
+        name: "Marina Beach",
+        about: `
+      <h3>About the Beach</h3>
+      <p>Marina Beach in Chennai is India's longest urban beach and a popular spot for locals and tourists. It stretches over 13 km along the Bay of Bengal.</p>
+    `,
+        highlights: `
+      <h3>Highlights</h3>
+      <p>1. Sunrise views, street food, and evening crowds.</p>
+      <p>2. Statues and memorials along the promenade.</p>
+      <p>3. Aquarium and lighthouse nearby.</p>
+    `,
+        tips: `
+      <h3>Visitor Tips</h3>
+      <p>1. Swimming is not allowed due to strong currents.</p>
+      <p>2. Best visited early morning or after 5 PM.</p>
+      <p>3. Keep the beach clean — avoid littering.</p>
+    `,
+        info: `
+      <h3>Beach Info</h3>
+      <p><span>Location:</span> Chennai</p>
+      <p><span>Entry:</span> Free</p>
+      <p><span>Open:</span> All day</p>
+    `
+      },
+
+      elliot: {
+        name: "Elliot's Beach",
+        about: `
+      <h3>About the Beach</h3>
+      <p>Located in Besant Nagar, Chennai, Elliot's Beach is a calm and clean spot, popular with youngsters and joggers.</p>
+    `,
+        highlights: `
+      <h3>Highlights</h3>
+      <p>1. Ashtalakshmi Temple nearby.</p>
+      <p>2. Scenic, less crowded than Marina.</p>
+      <p>3. Cafes and eateries line the shore.</p>
+    `,
+        tips: `
+      <h3>Visitor Tips</h3>
+      <p>1. Ideal for evening walks and photography.</p>
+      <p>2. Public toilets and parking available.</p>
+    `,
+        info: `
+      <h3>Beach Info</h3>
+      <p><span>Location:</span> Chennai (Besant Nagar)</p>
+      <p><span>Entry:</span> Free</p>
+      <p><span>Open:</span> All day</p>
+    `
+      },
+
+      mahabalipuram: {
+  name: "Mahabalipuram Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Mahabalipuram Beach is known for its scenic beauty and rock-cut monuments. It's located along the Coromandel Coast and is popular among tourists for sunbathing and photography.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Shore Temple facing the sea.</p>
+    <p>2. Surfing and beach walking.</p>
+    <p>3. Nearby ancient rock carvings and sculptures.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Avoid swimming due to rough tides.</p>
+    <p>2. Visit early morning or sunset for best views.</p>
+    <p>3. Carry sunscreen and water.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Mahabalipuram (Mamallapuram), Tamil Nadu</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+},
+kanyakumari: {
+  name: "Kanyakumari Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Kanyakumari Beach is famous for its unique location at the southernmost tip of India, where the Arabian Sea, Bay of Bengal, and Indian Ocean meet.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Sunrise and sunset over the ocean.</p>
+    <p>2. Vivekananda Rock Memorial and Thiruvalluvar Statue nearby.</p>
+    <p>3. Colorful seashell markets and temples.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Reach early for sunrise views.</p>
+    <p>2. Avoid rocky parts during high tide.</p>
+    <p>3. Ferries available to visit the rock memorial.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Kanyakumari, Tamil Nadu</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+},
+rameswaram: {
+  name: "Rameswaram Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Rameswaram Beach is located on Pamban Island and is known for its clear blue waters, religious importance, and coral reefs.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Close to Ramanathaswamy Temple.</p>
+    <p>2. Calm and safe for swimming.</p>
+    <p>3. Coral reef views and spiritual ambience.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Visit early morning for peaceful atmosphere.</p>
+    <p>2. Carry extra clothes if planning to swim.</p>
+    <p>3. Avoid plastic and maintain beach cleanliness.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Rameswaram, Tamil Nadu</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+},
+thiruchendur: {
+  name: "Thiruchendur Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Located beside the famous Subramanya Swamy Temple, Thiruchendur Beach is a scenic beach offering spiritual and natural beauty.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Pilgrimage site with sea-facing temple.</p>
+    <p>2. Golden sand and peaceful shoreline.</p>
+    <p>3. Local seafood and street vendors nearby.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Respect temple traditions if visiting shrine.</p>
+    <p>2. Be cautious while entering the sea – no lifeguards.</p>
+    <p>3. Ideal for early morning or evening visits.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Thiruchendur, Thoothukudi District</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+},
+silver: {
+  name: "Silver Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Silver Beach is one of the longest beaches in Asia, located in Cuddalore. It's a serene and less-crowded destination perfect for a peaceful outing.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Long stretch of clean sand and sea breeze.</p>
+    <p>2. Perfect for long walks and sunset views.</p>
+    <p>3. Horse rides and beach games during weekends.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Carry food and water – limited shops.</p>
+    <p>2. Be careful near water – tides can be unpredictable.</p>
+    <p>3. Avoid late evening if not in a group.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Cuddalore, Tamil Nadu</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+},
+sothavilai: {
+  name: "Sothavilai Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Sothavilai Beach is a hidden gem near Kanyakumari known for its calm waters, white sand, and peaceful environment. It's one of the longest beaches in Tamil Nadu.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Long coastline with minimal crowd.</p>
+    <p>2. Shallow water, ideal for families.</p>
+    <p>3. Clean and well-maintained surroundings.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Ideal for picnics and peaceful relaxation.</p>
+    <p>2. Limited shops, carry essentials.</p>
+    <p>3. Visit before sunset for best experience.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Kanyakumari District, Tamil Nadu</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+}
+,
+dhanushkodi: {
+  name: "Dhanushkodi Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Dhanushkodi Beach lies at the southeastern tip of Rameswaram. It is a spiritual and mysterious destination, close to the India-Sri Lanka border.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Known as the “ghost town” after the 1964 cyclone.</p>
+    <p>2. Confluence of Bay of Bengal and Indian Ocean.</p>
+    <p>3. Views of Adam’s Bridge (Ram Setu).</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Open only during daylight hours.</p>
+    <p>2. No hotels or shelters nearby — plan accordingly.</p>
+    <p>3. Travel by 4x4 jeep or minibus from Rameswaram.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Dhanushkodi, near Rameswaram</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> 6 AM – 6 PM</p>
+  `
+}
+,
+velankanni: {
+  name: "Velankanni Beach",
+  about: `
+    <h3>About the Beach</h3>
+    <p>Velankanni Beach is located near the famous Basilica of Our Lady of Good Health. It is a peaceful spot for pilgrims and tourists visiting the church.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Close to the historic Velankanni Church.</p>
+    <p>2. Calm waters and religious ambience.</p>
+    <p>3. Many local shops and seafood vendors nearby.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Respect the religious atmosphere.</p>
+    <p>2. Avoid swimming — water can be unpredictable.</p>
+    <p>3. Visit early morning or post-sunset.</p>
+  `,
+  info: `
+    <h3>Beach Info</h3>
+    <p><span>Location:</span> Velankanni, Nagapattinam District</p>
+    <p><span>Entry:</span> Free</p>
+    <p><span>Open:</span> All day</p>
+  `
+}
+    }
+
+    function showBeachDetails(beachId) {
+      const beach = beaches[beachId];
+      
+      if (beach) {
+        document.body.style.overflow = "hidden";
+        const content = `
+      <h1>${beach.name}</h1>
+      ${beach.about}
+      ${beach.highlights}
+      ${beach.tips}
+      ${beach.info}
+    `;
+        showPopup(content);
+      }
+    }
+
+
+  </script>
+  <script src="place.js"></script>
+</body>
+
+</html>

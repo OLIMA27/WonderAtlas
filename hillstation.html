@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hill Station</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+<!--Hill station details-->
+
+
+<div class="hill">
+    <h1>Cool and Scenic Hill Retreats of Tamil Nadu</h1>
+</div>
+
+<div class="hill-list">
+
+    <div class="hill-card" onclick="showHillStationDetails('ooty')">
+        <img src="ASSETS2/ooty.jpg" alt="Ooty"><br><br>
+        <h3>Ooty</h3>
+        <p>Nilgiris</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('kodaikanal')">
+        <img src="ASSETS1/kodaikanal.jpg" alt="Kodaikanal"><br><br>
+        <h3>Kodaikanal</h3>
+        <p>Dindigul</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('yercaud')">
+        <img src="ASSETS2/yercaud.jpg" alt="Yercaud"><br><br>
+        <h3>Yercaud</h3>
+        <p>Salem</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('coonoor')">
+        <img src="ASSETS/coonoor.jpg" alt="Coonoor"><br><br>
+        <h3>Coonoor</h3>
+        <p>Nilgiris</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('valparai')">
+        <img src="ASSETS2/valparai.jpg" alt="Valparai"><br><br>
+        <h3>Valparai</h3>
+        <p>Coimbatore</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('kolliHills')">
+        <img src="ASSETS1/kolli.jpg" alt="Kolli Hills"><br><br>
+        <h3>Kolli Hills</h3>
+        <p>Namakkal</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('yelagiri')">
+        <img src="ASSETS2/yelagiri.jpg" alt="Yelagiri"><br><br>
+        <h3>Yelagiri</h3>
+        <p>Tirupattur (Vellore)</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('megamalai')">
+        <img src="ASSETS1/megamalai.jpg" alt="Meghamalai"><br><br>
+        <h3>Meghamalai</h3>
+        <p>Theni</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('kotagiri')">
+        <img src="ASSETS1/kotagiri.jpg" alt="Kotagiri"><br><br>
+        <h3>Kotagiri</h3>
+        <p>Nilgiris</p><br>
+    </div>
+
+    <div class="hill-card" onclick="showHillStationDetails('kalrayanHills')">
+        <img src="ASSETS1/kalrayan.jpg" alt="Kalrayan Hills"><br><br>
+        <h3>Kalrayan Hills</h3>
+        <p>Villupuram / Salem</p><br>
+    </div>
+</div>
+
+<div class="overlay1" id="overlay" onclick="closePopup()"></div>
+
+<div class="popup1" id="popup">
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+<div class="overlay1" id="overlay" onclick="closePopup()"></div>
+<script>
+ function showPopup(contentHTML) {
+  document.getElementById("popup-content").innerHTML = contentHTML;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+   document.body.style.overflow = "hidden";
+}
+
+function closepopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+const hillstations ={
+    ooty: {
+  name: "Ooty",
+  about: `
+    <h3>About</h3>
+    <p>Known as the Queen of Hill Stations, Ooty is a popular retreat in the Nilgiris famous for its cool climate and colonial charm.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Ooty Lake & Boat House</p>
+    <p>2. Botanical Garden & Rose Garden</p>
+    <p>3. Nilgiri Mountain Railway (UNESCO site)</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Nilgiris</p>
+    <p><strong>Best Time:</strong> March to June, September to November</p>
+    <p><strong>Altitude:</strong> ~2,240 m</p>
+  `
+},
+kodaikanal: {
+  name: "Kodaikanal",
+  about: `
+    <h3>About</h3>
+    <p>Kodaikanal, meaning “The Gift of the Forest,” is a scenic hill station known for its lakes, waterfalls, and misty hills.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Kodaikanal Lake & Bryant Park</p>
+    <p>2. Coaker’s Walk & Pillar Rocks</p>
+    <p>3. Silver Cascade Falls</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Dindigul</p>
+    <p><strong>Best Time:</strong> April to June, September to October</p>
+    <p><strong>Altitude:</strong> ~2,133 m</p>
+  `
+},
+yercaud: {
+  name: "Yercaud",
+  about: `
+    <h3>About</h3>
+    <p>Yercaud is a quiet and less commercialized hill station in the Shevaroy Hills, often called the Poor Man's Ooty.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Yercaud Lake & Anna Park</p>
+    <p>2. Pagoda Point & Lady’s Seat</p>
+    <p>3. Botanical Garden & Loop Road drive</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Salem</p>
+    <p><strong>Best Time:</strong> October to June</p>
+    <p><strong>Altitude:</strong> ~1,515 m</p>
+  `
+},
+coonoor: {
+  name: "Coonoor",
+  about: `
+    <h3>About</h3>
+    <p>Coonoor is a peaceful hill station near Ooty known for tea gardens, colonial charm, and cool breezes.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Sim’s Park & Lamb’s Rock</p>
+    <p>2. Dolphin’s Nose Viewpoint</p>
+    <p>3. Tea estates and toy train ride</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Nilgiris</p>
+    <p><strong>Best Time:</strong> October to March</p>
+    <p><strong>Altitude:</strong> ~1,850 m</p>
+  `
+},
+kolliHills: {
+  name: "Kolli Hills",
+  about: `
+    <h3>About</h3>
+    <p>Kolli Hills is a remote and unexplored hill station known for hairpin bends and ancient medicinal herbs.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Agaya Gangai Waterfalls</p>
+    <p>2. Arapaleeswarar Temple</p>
+    <p>3. 70 Hairpin Bends drive</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Namakkal</p>
+    <p><strong>Best Time:</strong> August to December</p>
+    <p><strong>Altitude:</strong> ~1,300 m</p>
+  `
+},
+yelagiri: {
+  name: "Yelagiri",
+  about: `
+    <h3>About</h3>
+    <p>Yelagiri is a laid-back hill station ideal for trekking, boating, and paragliding enthusiasts.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Punganoor Lake & Nature Park</p>
+    <p>2. Swamimalai Hill trek</p>
+    <p>3. Adventure sports & Paragliding</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Tirupattur</p>
+    <p><strong>Best Time:</strong> November to February</p>
+    <p><strong>Altitude:</strong> ~1,110 m</p>
+  `
+},
+meghamalai: {
+  name: "Meghamalai",
+  about: `
+    <h3>About</h3>
+    <p>Meghamalai is a serene and misty hill range with tea estates, waterfalls, and wildlife in the Western Ghats.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Tea plantations & Meghamalai Wildlife Sanctuary</p>
+    <p>2. Suruli Falls</p>
+    <p>3. Cloud-covered scenic views</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Theni</p>
+    <p><strong>Best Time:</strong> October to March</p>
+    <p><strong>Altitude:</strong> ~1,500 m</p>
+  `
+},
+kotagiri: {
+  name: "Kotagiri",
+  about: `
+    <h3>About</h3>
+    <p>Kotagiri is a peaceful hill station near Ooty with lush green tea estates and scenic trekking trails.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Catherine Falls</p>
+    <p>2. Longwood Shola Forest</p>
+    <p>3. Kodanad View Point</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Nilgiris</p>
+    <p><strong>Best Time:</strong> March to June, September to October</p>
+    <p><strong>Altitude:</strong> ~1,793 m</p>
+  `
+},
+kalrayanHills: {
+  name: "Kalrayan Hills",
+  about: `
+    <h3>About</h3>
+    <p>The Kalrayan Hills are a quiet and offbeat hill station range in the Eastern Ghats, ideal for nature lovers and trekkers.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Waterfalls and tribal villages</p>
+    <p>2. Viewpoints and forest treks</p>
+    <p>3. Low crowd and pristine nature</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>District:</strong> Kallakurichi & Salem</p>
+    <p><strong>Best Time:</strong> October to February</p>
+    <p><strong>Altitude:</strong> ~1,000 m</p>
+  `
+},
+valparai: {
+  name: "Valparai",
+  about: `
+    <h3>About</h3>
+    <p>Valparai is a serene hill station in the Anamalai Hills of Tamil Nadu, known for its lush tea estates, cool climate, and wildlife.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Tea and coffee plantations</p>
+    <p>2. Aliyar Dam and Monkey Falls</p>
+    <p>3. Anamalai Tiger Reserve and wildlife spotting</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Coimbatore District, Tamil Nadu</p>
+    <p><strong>Timing:</strong> Best visited between September and March</p>
+    <p><strong>Entry Fee:</strong> Most attractions are free; forest areas may have minimal charges</p>
+  `
+}
+
+}
+
+function showHillStationDetails(hillstationId) {
+  const hillstation = hillstations[hillstationId];
+  if (hillstation) {
+    const content = `
+      <h1>${hillstation.name}</h1>
+      ${hillstation.about}
+      ${hillstation.highlights}
+      ${hillstation.info}
+    `;
+    showPopup(content);
+  } else {
+    alert("Hillstation details not found!");
+  }
+}
+
+</script>
+    <script src="place.js"></script>
+</body>
+</html>

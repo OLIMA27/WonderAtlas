@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+    <!--Parks-->
+
+    <div class="parks">
+        <h1>Explore the Green Parks of Tamil Nadu</h1>
+    </div>
+    <div class="park-list">
+        <div class="park-card" onclick="showParkDetails('guindy')">
+            <img src="ASSETS/gunidy park.jpg" alt="Guindy National Park"><br><br>
+            <h3>Guindy National Park</h3>
+            <p>Guindy,Tamil Nadu</p><br>
+        </div>
+
+        <div class="park-card" onclick="showParkDetails('mudumalai')">
+            <img src="ASSETS1/mudumalai park.jpg" alt="Mudumalai National Park"><br><br>
+            <h3>Mudumalai National Park</h3>
+            <p>Nilgiri, Tamil Nadu</p><br>
+        </div>
+
+        <div class="park-card" onclick="showParkDetails('indira')">
+            <img src="ASSETS/indra gandi park.jpg " alt="Indra Gandhi"><br><br>
+            <h3>Indira Gandhi Wildlife Sanctuary</h3>
+            <p>Pollachi in Coimbatore District, Tamil Nadu</p><br>
+        </div>
+        <div class="park-card" onclick="showParkDetails('amirthi')">
+            <img src="ASSETS/amirthi park.jpg" alt="Amirthi Zoological Park"><br><br>
+            <h3>Amirthi Zoological Park</h3>
+            <p>Vellore District of Tamil Nadu,</p><br>
+        </div>
+        <div class="park-card" onclick="showParkDetails('mannar')">
+            <img src="ASSETS/gulf park.jpg" alt="Gulf of Mannar"><br><br>
+            <h3>Gulf of Mannar Marine Park</h3>
+            <p>Southeastern coast of Tamil Nadu</p><br>
+        </div>
+
+        <div class="park-card" onclick="showParkDetails('vedanthangal')">
+            <img src="ASSETS2/vedanthangal park.jpg" alt="Vedanthangal Bird Sanctuary"><br><br>
+            <h3>Vedanthangal Bird Sanctuary</h3>
+            <p>Chengalpattu,Tamil Nadu,</p><br>
+        </div>
+
+    </div>
+
+    <div class="overlay1" id="overlay" onclick="closePopup()"></div>
+
+
+<div class="popup1" id="popup">
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+
+<script>
+ function showPopup(contentHTML) {
+  document.getElementById("popup-content").innerHTML = contentHTML;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+}
+
+function closepopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+    const parks = {
+  guindy: {
+    name: "Guindy National Park",
+    about: `
+      <h3>About the Park</h3>
+      <p>Guindy National Park is one of the few national parks located inside a city. Spread over 2.7 sq km, it is home to blackbucks, spotted deer, jackals, and many bird species.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. Children's park and snake park inside the premises.</p>
+      <p>2. Ideal for nature walks and family visits.</p>
+      <p>3. Protected habitat inside urban Chennai.</p>
+    `,
+    tips: `
+      <h3>Visitor Tips</h3>
+      <p>1. Wear comfortable shoes for walking.</p>
+      <p>2. Ideal visiting hours: morning and late afternoon.</p>
+      <p>3. Carry water and avoid plastic.</p>
+    `,
+    info: `
+      <h3>Park Info</h3>
+      <p><span>Location:</span> Chennai, Tamil Nadu</p>
+      <p><span>Timings:</span> 9:00 AM – 5:30 PM</p>
+      <p><span>Entry Fee:</span> ₹20 (adults), ₹5 (children)</p>
+    `
+  },
+
+  mudumalai: {
+  name: "Mudumalai National Park",
+  about: `
+    <h3>About the Park</h3>
+    <p>Located at the tri-junction of Tamil Nadu, Kerala, and Karnataka, Mudumalai is one of the first wildlife sanctuaries in South India. It’s home to elephants, tigers, leopards, deer, and a wide variety of birds.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Safari rides to spot elephants and tigers.</p>
+    <p>2. Dense forest and grasslands at the foot of the Nilgiris.</p>
+    <p>3. Rich in both flora and fauna, including over 250 bird species.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Safari timings are limited — go early.</p>
+    <p>2. Maintain silence during the ride.</p>
+    <p>3. Avoid wearing bright clothes.</p>
+  `,
+  info: `
+    <h3>Park Info</h3>
+    <p><span>Location:</span> Nilgiri District, Tamil Nadu</p>
+    <p><span>Timings:</span> 6:00 AM – 6:00 PM</p>
+    <p><span>Entry Fee:</span> ₹30 (adults), Safari additional</p>
+  `
+}
+,
+indira: {
+  name: "Indira Gandhi Wildlife Sanctuary",
+  about: `
+    <h3>About the Sanctuary</h3>
+    <p>Also known as Anamalai Tiger Reserve, it’s a major wildlife habitat in Western Ghats with evergreen forests, waterfalls, and scenic valleys. It protects Bengal tigers, elephants, gaur, and leopards.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Elephant safari and jungle trekking.</p>
+    <p>2. Grass Hills viewpoint and Topslip Eco-tourism zone.</p>
+    <p>3. Endangered species like the lion-tailed macaque can be spotted.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Carry ID proof for entry passes.</p>
+    <p>2. Visit in early morning or post noon for best animal visibility.</p>
+    <p>3. Follow forest guide instructions strictly.</p>
+  `,
+  info: `
+    <h3>Sanctuary Info</h3>
+    <p><span>Location:</span> Pollachi, Tamil Nadu</p>
+    <p><span>Timings:</span> 7:00 AM – 4:00 PM</p>
+    <p><span>Entry Fee:</span> ₹30 (Indians), ₹250 (Foreigners)</p>
+  `
+},
+amirthi: {
+  name: "Amirthi Zoological Park",
+  about: `
+    <h3>About the Park</h3>
+    <p>Amirthi Zoological Park is a small but scenic wildlife park near Vellore, offering a mix of zoo animals and forest trekking. It’s a popular family and school picnic spot.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Mini-zoo with deer, monkeys, and peacocks.</p>
+    <p>2. Nature trails and waterfalls during the monsoon.</p>
+    <p>3. Peaceful environment with birds chirping.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Ideal for a short 2–3 hour visit.</p>
+    <p>2. Carry water and snacks — few shops around.</p>
+    <p>3. Best after rainy season for waterfall views.</p>
+  `,
+  info: `
+    <h3>Park Info</h3>
+    <p><span>Location:</span> Vellore District, Tamil Nadu</p>
+    <p><span>Timings:</span> 8:00 AM – 5:30 PM</p>
+    <p><span>Entry Fee:</span> ₹10</p>
+  `
+},
+mannar: {
+  name: "Gulf of Mannar Marine National Park",
+  about: `
+    <h3>About the Park</h3>
+    <p>India’s first marine biosphere reserve, this park protects coral reefs, seagrass beds, and marine wildlife across 21 islands in the Gulf of Mannar between Rameswaram and Tuticorin.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Coral reefs, sea turtles, dolphins, and dugongs.</p>
+    <p>2. Boating around the islands (restrictions apply).</p>
+    <p>3. Famous for pearl oysters and marine biodiversity.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Boating allowed only with forest permission.</p>
+    <p>2. Avoid plastic to protect marine life.</p>
+    <p>3. Visit Marine Interpretation Centre for awareness.</p>
+  `,
+  info: `
+    <h3>Park Info</h3>
+    <p><span>Location:</span> Near Rameswaram and Tuticorin, Tamil Nadu</p>
+    <p><span>Timings:</span> 10:00 AM – 5:00 PM</p>
+    <p><span>Entry Fee:</span> Depends on zone and activity</p>
+  `
+}
+,
+vedanthangal: {
+  name: "Vedanthangal Bird Sanctuary",
+  about: `
+    <h3>About the Sanctuary</h3>
+    <p>One of the oldest bird sanctuaries in India, Vedanthangal attracts thousands of migratory birds like storks, herons, ibises, and egrets every winter.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Over 40,000 birds visit annually from November to March.</p>
+    <p>2. Elevated view towers and walking paths for birdwatching.</p>
+    <p>3. Spot both native and exotic species in one place.</p>
+  `,
+  tips: `
+    <h3>Visitor Tips</h3>
+    <p>1. Bring binoculars or rent them near the gate.</p>
+    <p>2. Best time to visit: December to February.</p>
+    <p>3. Maintain silence to avoid disturbing the birds.</p>
+  `,
+  info: `
+    <h3>Sanctuary Info</h3>
+    <p><span>Location:</span> Chengalpattu District, Tamil Nadu</p>
+    <p><span>Timings:</span> 6:00 AM – 6:00 PM</p>
+    <p><span>Entry Fee:</span> ₹25</p>
+  `
+}
+  };
+
+
+
+function showParkDetails(parkId) {
+  const park = parks[parkId];
+  if (park) {
+     document.body.style.overflow = "hidden";
+    const content = `
+      <h1>${park.name}</h1>
+      ${park.about}
+      ${park.highlights}
+      ${park.tips}
+      ${park.info}
+    `;
+    showPopup(content);
+  } else {
+    alert("Park data not found.");
+  }
+}
+
+ 
+
+</script>
+
+
+    <script src="place.js"></script>
+</body>
+</html>

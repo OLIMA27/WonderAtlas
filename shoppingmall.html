@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Mall</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+    <!--shopping mall-->
+
+<div class="mall">
+    <h1>Top Shopping Malls in Tamil Nadu for Style, Food & Fun</h1>
+
+</div>
+    <div class="mall-list">
+
+        <div class="mall-card" onclick="showMallDetails('express')">
+            <img src="ASSETS/express.jpg" alt="Express Avenue"><br><br>
+            <h3>Express Avenue Mall</h3>
+            <p>Royapettah, Chennai</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('phoenix')">
+            <img src="ASSETS2/phoenix.jpg" alt="Phoenix Marketcity"><br><br>
+            <h3>Phoenix Marketcity</h3>
+            <p>Velachery, Chennai</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('vrchennai')">
+            <img src="ASSETS2/vrchennai.jpg" alt="VR Chennai"><br><br>
+            <h3>VR Chennai Mall</h3>
+            <p>Anna Nagar, Chennai</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('spencer')">
+            <img src="ASSETS2/spencer.jpg" alt="Spencer Plaza"><br><br>
+            <h3>Spencer Plaza</h3>
+            <p>Mount Road, Chennai</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('forum')">
+            <img src="ASSETS/forum.jpg" alt="Forum Vijaya Mall"><br><br>
+            <h3>Forum Vijaya Mall</h3>
+            <p>Vadapalani, Chennai</p><br>
+        </div>
+
+
+        <div class="mall-card" onclick="showMallDetails('brookefields')">
+            <img src="ASSETS/bookefields.jpg" alt="Brookefields Mall"><br><br>
+            <h3>Brookefields Mall</h3>
+            <p>Coimbatore</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('prozone')">
+            <img src="ASSETS2/prozen.jpg" alt="Prozone Mall"><br><br>
+            <h3>Prozone Mall</h3>
+            <p>Coimbatore</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('funrepublic')">
+            <img src="ASSETS/funrepublic.jpg" alt="Fun Republic Mall"><br><br>
+            <h3>Fun Republic Mall</h3>
+            <p>Coimbatore</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('spectrum')">
+            <img src="ASSETS2/spectrum.jpg" alt="Spectrum Mall"><br><br>
+            <h3>Spectrum Mall</h3>
+            <p>Perambur, Chennai</p><br>
+        </div>
+
+        <div class="mall-card" onclick="showMallDetails('relianceMall')">
+            <img src="ASSETS2/reliance.jpg" alt="Reliance Mall"><br><br>
+            <h3>Reliance Mall</h3>
+            <p>Salem / Various Cities</p><br>
+        </div>
+
+    </div>
+
+
+
+
+<div class="popup1" id="popup">
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+     <div class="overlay1" id="overlay" onclick="closePopup()"></div>
+
+<script>
+ function showPopup(contentHTML) {
+  document.getElementById("popup-content").innerHTML = contentHTML;
+  document.getElementById("popup").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
+   document.body.style.overflow = "hidden";
+}
+
+function closepopup() {
+  document.getElementById("popup").style.display = "none";
+  document.getElementById("overlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+
+const malls = {
+  phoenix: {
+    name: "Phoenix Marketcity",
+    about: `
+      <h3>About</h3>
+      <p>One of the largest malls in Chennai, offering a wide range of international brands, food courts, and entertainment options.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. Over 300 stores</p>
+      <p>2. PVR Cinemas, IMAX screens</p>
+      <p>3. Live events and concerts often hosted</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> Velachery, Chennai</p>
+      <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+
+  express: {
+    name: "Express Avenue Mall",
+    about: `
+      <h3>About</h3>
+      <p>A premium mall in Chennai with fashion stores, luxury brands, and the largest gaming zone in South India.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. Over 150 stores</p>
+      <p>2. SPI Cinemas multiplex</p>
+      <p>3. Kids play area and food court</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> Royapettah, Chennai</p>
+      <p><strong>Timing:</strong> 10:30 AM – 9:30 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+
+  forum: {
+    name: "The Forum Vijaya Mall",
+    about: `
+      <h3>About</h3>
+      <p>A vibrant shopping destination with fashion outlets, restaurants, and one of the best multiplexes in Chennai.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. SPI Palazzo Cinema (luxury)</p>
+      <p>2. Branded fashion stores</p>
+      <p>3. Variety of dining options</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> Vadapalani, Chennai</p>
+      <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+
+  prozone: {
+    name: "Prozone Mall",
+    about: `
+      <h3>About</h3>
+      <p>Coimbatore's biggest mall, featuring shopping, food, entertainment, and multiplex all under one roof.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. Spacious mall with open layout</p>
+      <p>2. INOX Multiplex</p>
+      <p>3. Gaming and food court</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> Sivanandhapuram, Coimbatore</p>
+      <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+
+  brookefields: {
+    name: "Brookefields Mall",
+    about: `
+      <h3>About</h3>
+      <p>One of the most visited malls in Coimbatore, offering fashion, cinema, restaurants, and more.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. INOX Cinema</p>
+      <p>2. Food court with global cuisine</p>
+      <p>3. Retail and electronic stores</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> R.S. Puram, Coimbatore</p>
+      <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+
+  spectrum: {
+    name: "Spectrum Mall",
+    about: `
+      <h3>About</h3>
+      <p>Spectrum Mall is a cozy and accessible shopping and entertainment spot for locals in Chennai.</p>
+    `,
+    highlights: `
+      <h3>Highlights</h3>
+      <p>1. S2 Cinemas</p>
+      <p>2. Food court and hypermarket</p>
+      <p>3. Popular with families</p>
+    `,
+    info: `
+      <h3>Visitor Info</h3>
+      <p><strong>Location:</strong> Perambur, Chennai</p>
+      <p><strong>Timing:</strong> 10 AM – 9:30 PM</p>
+      <p><strong>Entry Fee:</strong> Free</p>
+    `
+  },
+  vrchennai: {
+  name: "VR Chennai",
+  about: `
+    <h3>About</h3>
+    <p>VR Chennai is a premium lifestyle destination offering shopping, dining, entertainment, and art in a modern setting.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Over 240 retail outlets including global brands</p>
+    <p>2. PVR ICON luxury cinema</p>
+    <p>3. Rooftop garden and cultural events</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Anna Nagar, Chennai</p>
+    <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+spencer: {
+  name: "Spencer Plaza",
+  about: `
+    <h3>About</h3>
+    <p>Spencer Plaza is one of the oldest shopping malls in India, combining historic charm with diverse retail options.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Variety of Indian ethnic wear and crafts</p>
+    <p>2. Budget-friendly shopping experience</p>
+    <p>3. Central location on Anna Salai</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Anna Salai, Chennai</p>
+    <p><strong>Timing:</strong> 10 AM – 9 PM</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+funrepublic: {
+  name: "Fun Republic Mall",
+  about: `
+    <h3>About</h3>
+    <p>Fun Republic is a popular mall known for its mix of retail, entertainment, and dining options, primarily located in Coimbatore.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Multiplex cinema</p>
+    <p>2. Food court with various cuisines</p>
+    <p>3. Apparel, electronics, and lifestyle stores</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> Peelamedu, Coimbatore</p>
+    <p><strong>Timing:</strong> 10 AM – 10 PM</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+  `
+},
+relianceMall: {
+  name: "Reliance Mall (GJ Centre)",
+  about: `
+    <h3>About</h3>
+    <p>Reliance Mall inside GJ Centre is a retail hub featuring Reliance Trends and Reliance Digital in Iyyappanthangal, Chennai.</p>
+  `,
+  highlights: `
+    <h3>Highlights</h3>
+    <p>1. Reliance Trends (fashion apparel)</p>
+    <p>2. Reliance Digital (electronics, gadgets, home appliances)</p>
+    <p>3. Convenient suburban location with parking</p>
+  `,
+  info: `
+    <h3>Visitor Info</h3>
+    <p><strong>Location:</strong> GJ Centre, Mount Poonamallee Rd, Iyyappanthangal, Chennai, Tamil Nadu 600056</p>
+    <p><strong>Timing:</strong> Around 11:00 AM – 9:30 PM daily (Reliance Trends & Trends store hours) and Reliance Digital Koyambedu (11:00 AM–10:00 PM) if visiting its Chennai outlets</p>
+    <p><strong>Entry Fee:</strong> Free</p>
+    <p><strong>Phone:</strong> +91 1800 102 7382 (Reliance retail customer care)</p>
+  `
+} 
+};
+function showMallDetails(mallId) {
+  const mall = malls[mallId];
+  if (mall) {
+    const content = `
+      <h1>${mall.name}</h1>
+      ${mall.about}
+      ${mall.highlights}
+      ${mall.info}
+    `;
+    showPopup(content);
+  } else {
+    alert("Mall details not found!");
+  }
+}
+
+</script>
+
+
+
+
+
+    <script src="place.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater</title>
+    <link rel="stylesheet" href="place.css">
+    <!--Font Awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Google Font - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Navbar-->
+    <div class="container1">
+        <div class="header">
+            <h1>WonderAtlas</h1>
+        </div>
+        <div class="nav">
+            <p class="nav-links"><a href="index.html">Home</a></p>
+            <p class="nav-links"><a href="explore.html">Explore</a></p>
+            <p class="nav-links"><a href="temple.html">Categories</a></p>
+            <p class="nav-links"><a href="">Contact</a></p>
+        </div>
+        <div class="toggle" onclick="opentoggle()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+
+    <!--Side navbar-->
+    <div class="sidenav" id="sidebar">
+        <div class="closetoggle" onclick="closedtoggle()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="side-nav">
+            <p class="sidenav-links"><a href="index.html">Home</a></p>
+            <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+            <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+            <p class="sidenav-links"><a href="">Contact</a></p>
+        </div>
+    </div>
+
+
+<!--Theater details-->
+
+    <div class="theater">
+       <h1>Popular Cinema Halls Across Tamil Nadu</h1>
+    </div>
+
+  <div class="theater-list">
+
+    <div class="theater-card" onclick="showTheaterDetails('sathyam')">
+      <img src="ASSETS2/sathyam th.jpg" alt="Sathyam Cinemas"><br><br>
+        <h3>Sathyam Cinemas</h3>
+        <p>Royapettah, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('pvr')">
+      <img src="ASSETS2/pvr.jpg" alt="PVR Palazzo" style="width: 280px; height: 250px;"><br><br>
+        <h3>PVR Palazzo (Forum Mall)</h3>
+        <p>Vadapalani, Chennai</p><br>
+      </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('escape')">
+      <img src="ASSETS/escape th.jpg" alt="Escape Cinemas"><br><br>
+        <h3>Escape Cinemas</h3>
+        <p>Express Avenue Mall, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('inox_arcot')">
+      <img src="ASSETS/inox th.jpg" alt="INOX National"><br><br>
+        <h3>INOX National</h3>
+        <p>Arcot Road, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('ags')">
+      <img src="ASSETS/agsth.jpg" alt="AGS Cinemas"><br><br>
+        <h3>AGS Cinemas</h3>
+        <p>Chennai (OMR, Villivakkam)</p><br>
+    </div>
+    <div class="theater-card" onclick="showTheaterDetails('inox_brookefields')">
+      <img src="ASSETS/inox3.jpg" alt="INOX-Brookefields"><br><br>
+        <h3>INOX-Brookefields Mall</h3>
+        <p> Coimbatore</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('rohini')">
+      <img src="ASSETS2/rohini th.jpg" alt="Rohini Silver Screens"><br><br>
+        <h3>Rohini Silver Screens</h3>
+        <p>Koyambedu, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('devi')">
+      <img src="ASSETS/devi th.jpg" alt="Devi Cineplex"><br><br>
+        <h3>Devi Complex</h3>
+        <p>Mount Road, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('sangam')">
+      <img src="ASSETS2/sangam th.jpg" alt="Sangam Cinemas"><br><br>
+        <h3>Sangam Cinemas</h3>
+        <p>Kilpauk, Chennai</p><br>
+    </div>
+
+    <div class="theater-card" onclick="showTheaterDetails('inox_prozone')">
+      <img src="ASSETS/inox2.jpg" alt="INOX Prozone" style="width: 280px; height: 220px;"><br><br>
+        <h3>INOX-Prozone Mall</h3>
+        <p>Coimbatore</p><br>
+    </div>
+
+    
+  </div>
+
+ 
+   <div class="overlay1" id="overlay" onclick="closePopup()"></div>
+
+
+<div class="popup1" id="popup">
+  <!-- <button class="close-btn" onclick="closePopup()">X</button> -->
+   <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+  <div id="popup-content"></div>
+</div>
+
+
+
+  <script>
+
+
+ function showPopup(content) {
+  document.getElementById("popup-content").innerHTML = content;
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("popup").style.display = "block";
+   document.body.style.overflow = "hidden";
+}
+
+function closepopup() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("popup").style.display = "none";
+  document.body.style.overflow = "auto"; // Re-enable scrolling
+}
+
+
+
+const theaters = {
+  sathyam: {
+    name: "Sathyam Cinemas",
+    about: `
+      <h3>About</h3>
+      <p>One of Chennai's most iconic multiplexes, known for its premium audio-visual experience, excellent ambience, and caramel popcorn.</p>
+    `,
+    features: `
+      <h3>Features</h3>
+      <p>1. IMAX screen</p>
+      <p>2. Luxury seating</p>
+      <p>3. Gaming zone and café</p>
+    `,
+    info: `
+      <h3>Theater Info</h3>
+      <p><strong>Location:</strong> Royapettah, Chennai</p>
+      <p><strong>Timings:</strong> 10:00 AM - 12:00 AM</p>
+      <p><strong>Booking:</strong> Available on BookMyShow & PayTM</p>
+    `
+  },
+
+  inox: {
+    name: "INOX National",
+    about: `
+      <h3>About</h3>
+      <p>A well-known multiplex in Chennai offering a comfortable movie experience with multiple screens and modern amenities.</p>
+    `,
+    features: `
+      <h3>Features</h3>
+      <p>1. Recliner seats available</p>
+      <p>2. Dolby Atmos sound</p>
+      <p>3. Attached food court</p>
+    `,
+    info: `
+      <h3>Theater Info</h3>
+      <p><strong>Location:</strong> Vadapalani, Chennai</p>
+      <p><strong>Timings:</strong> 10:00 AM - 11:30 PM</p>
+      <p><strong>Booking:</strong> Online & Offline</p>
+    `
+  },
+
+  ags: {
+    name: "AGS Cinemas",
+    about: `
+      <h3>About</h3>
+      <p>AGS is a popular theater chain in Tamil Nadu with large screens, clean facilities, and family-friendly services.</p>
+    `,
+    features: `
+      <h3>Features</h3>
+      <p>1. Spacious seating</p>
+      <p>2. 2K projection systems</p>
+      <p>3. Fast service counters</p>
+    `,
+    info: `
+      <h3>Theater Info</h3>
+      <p><strong>Location:</strong> T. Nagar, Chennai</p>
+      <p><strong>Timings:</strong> 9:00 AM - 11:45 PM</p>
+      <p><strong>Booking:</strong> BookMyShow, AGS Website</p>
+    `
+  },
+  pvr: {
+  name: "PVR Cinemas (Forum Mall)",
+  about: `
+    <h3>About</h3>
+    <p>PVR Cinemas at Forum Mall is a luxurious multiplex offering top-notch visuals and audio. It's known for its clean ambience, modern amenities, and comfortable seating.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Multiple screens with 2K & 4K projection</p>
+    <p>2. Recliner and Gold Class options</p>
+    <p>3. Located inside a popular shopping mall</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Forum Mall, Vadapalani, Chennai</p>
+    <p><strong>Timings:</strong> 10:00 AM - 12:00 AM</p>
+    <p><strong>Booking:</strong> BookMyShow, PVR App</p>
+  `
+},
+escape: {
+  name: "Escape Cinemas",
+  about: `
+    <h3>About</h3>
+    <p>Escape is a premium multiplex by SPI Cinemas located inside Express Avenue Mall. It's known for its art-inspired interiors and high-end cinematic experience.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Thematic screen lounges</p>
+    <p>2. Dolby Atmos and 4K projection</p>
+    <p>3. High-quality snacks and beverages</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Express Avenue Mall, Royapettah, Chennai</p>
+    <p><strong>Timings:</strong> 9:30 AM - 12:00 AM</p>
+    <p><strong>Booking:</strong> SPI Cinemas, BookMyShow</p>
+  `
+},
+ ags: {
+    name: "AGS Cinemas",
+    about: `
+      <h3>About</h3>
+      <p>AGS is a popular theater chain in Tamil Nadu with large screens, clean facilities, and family-friendly services.</p>
+    `,
+    features: `
+      <h3>Features</h3>
+      <p>1. Spacious seating</p>
+      <p>2. 2K projection systems</p>
+      <p>3. Fast service counters</p>
+    `,
+    info: `
+      <h3>Theater Info</h3>
+      <p><strong>Location:</strong> T. Nagar, Chennai</p>
+      <p><strong>Timings:</strong> 9:00 AM - 11:45 PM</p>
+      <p><strong>Booking:</strong> BookMyShow, AGS Website</p>
+    `
+  },
+  inox_arcot: {
+  name: "INOX National",
+  about: `
+    <h3>About</h3>
+    <p>INOX National on Arcot Road is a well-equipped multiplex offering a high-quality movie experience with excellent seating and sound systems.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Multiple screens with Dolby Atmos</p>
+    <p>2. Comfortable recliners available</p>
+    <p>3. Food and beverages delivered to your seat</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Arcot Road, Vadapalani, Chennai</p>
+    <p><strong>Timings:</strong> 10:00 AM - 11:30 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, INOX Website</p>
+  `
+},
+inox: {
+  name: "NOX Cinemas (Brookefields Mall)",
+  about: `
+    <h3>About</h3>
+    <p>Located inside Brookefields Mall, NOX Cinemas is one of Coimbatore's most popular movie spots, known for clean surroundings and modern tech.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Spacious halls and digital projection</p>
+    <p>2. Recliners and VIP class available</p>
+    <p>3. Attached food court and mall access</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Brookefields Mall, Coimbatore</p>
+    <p><strong>Timings:</strong> 10:00 AM – 11:45 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, NOX App</p>
+  `
+},
+rohini: {
+  name: "Rohini Silver Screens",
+  about: `
+    <h3>About</h3>
+    <p>Rohini Silver Screens is a legendary cinema in Chennai known for large single-screen excitement and first-day-first-show fanfare. It's a favorite for Tamil movie lovers.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Large 4K screen and Dolby Atmos</p>
+    <p>2. Crowd energy for FDFS shows</p>
+    <p>3. Air-conditioned, clean interiors</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Koyambedu, Chennai</p>
+    <p><strong>Timings:</strong> 9:00 AM – 11:45 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, PayTM</p>
+  `
+},
+
+inox_prozone: {
+  name: "INOX Prozone Mall",
+  about: `
+    <h3>About</h3>
+    <p>INOX at Prozone Mall in Coimbatore offers a luxurious multiplex experience with multiple screens, clean seating, and immersive sound technology.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. 4K digital projection</p>
+    <p>2. Comfortable recliners & reserved seating</p>
+    <p>3. Food court access from the mall</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Prozone Mall, Sivanandhapuram, Coimbatore</p>
+    <p><strong>Timings:</strong> 10:00 AM – 11:30 PM</p>
+    <p><strong>Booking:</strong> INOX Website, BookMyShow</p>
+  `
+},
+sangam: {
+  name: "Sangam Cinemas",
+  about: `
+    <h3>About</h3>
+    <p>Sangam Cinemas is one of Chennai’s most iconic single-screen theaters, recently upgraded with modern interiors, digital projection, and Dolby sound.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Renovated screens with digital sound</p>
+    <p>2. Great value for movie-goers</p>
+    <p>3. Popular for Tamil movie releases</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Poonamallee High Road, Chennai</p>
+    <p><strong>Timings:</strong> 9:00 AM-11:30 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, PayTM</p>
+  `
+}
+,
+sangam: {
+  name: "Sangam Cinemas",
+  about: `
+    <h3>About</h3>
+    <p>Sangam Cinemas is one of Chennai's most iconic single-screen theaters, recently upgraded with modern interiors, digital projection, and Dolby sound.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Renovated screens with digital sound</p>
+    <p>2. Great value for movie-goers</p>
+    <p>3. Popular for Tamil movie releases</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Poonamallee High Road, Chennai</p>
+    <p><strong>Timings:</strong> 9:00 AM - 11:30 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, PayTM</p>
+  `
+},
+inox_brookefields: {
+  name: "INOX - Brookefields Mall",
+  about: `
+    <h3>About</h3>
+    <p>INOX at Brookefields Mall is a premium multiplex in Coimbatore, known for its modern facilities, clean ambience, and high-quality movie experience.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Recliner seating with luxury comfort</p>
+    <p>2. Dolby Atmos sound system</p>
+    <p>3. Located inside a popular mall with shopping and food court access</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Brookefields Mall, Coimbatore</p>
+    <p><strong>Timings:</strong> 10:00 AM - 11:45 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, INOX Website</p>
+  `
+},
+devi: {
+  name: "Devi Cineplex (Devi Complex)",
+  about: `
+    <h3>About</h3>
+    <p>Devi Complex is a heritage cinema in Chennai with multiple screens like Devi, Devi Paradise, and Devi Kala. It’s known for hosting big Tamil film releases.</p>
+  `,
+  features: `
+    <h3>Features</h3>
+    <p>1. Multiple screens in one complex</p>
+    <p>2. Affordable pricing and large seats</p>
+    <p>3. Popular among college crowd and families</p>
+  `,
+  info: `
+    <h3>Theater Info</h3>
+    <p><strong>Location:</strong> Anna Salai (Mount Road), Chennai</p>
+    <p><strong>Timings:</strong> 10:00 AM- 11:00 PM</p>
+    <p><strong>Booking:</strong> BookMyShow, PayTM</p>
+  `
+}
+
+  
+};
+
+ function showTheaterDetails(id) {
+  const theater = theaters[id];
+  if (theater) {
+    document.body.style.overflow = "hidden";
+    const content = `
+      <h1>${theater.name}</h1>
+      ${theater.about}
+      ${theater.features}
+      ${theater.info}
+    `;
+    showPopup(content);
+  }
+}
+  </script>
+    <script src="place.js"></script>
+</body>
+</html>
