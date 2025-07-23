@@ -170,17 +170,20 @@ section h2 {
     box-shadow: 5px 5px 15px lightseagreen;
 
 }
-.place-image p{
+
+.place-image p {
     color: #2d6a4f;
 }
+
 .places a {
-  text-decoration: none;
-  color: inherit; 
+    text-decoration: none;
+    color: inherit;
 }
 
-.place-image a p{
+.place-image a p {
     text-decoration: none;
 }
+
 .places a {
     margin-left: 50px;
 }
@@ -191,7 +194,7 @@ section h2 {
 }
 
 .place-image img:hover {
-   transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 .place-image {
@@ -199,20 +202,22 @@ section h2 {
     margin-bottom: 30px;
     height: 380px;
 }
+
 /* temple style */
-.temple h1{
+.temple h1 {
     color: rgb(220, 134, 4);
     text-align: center;
     margin-top: 50px;
 }
 
-.temple-list{
+.temple-list {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     text-align: center;
     margin-top: 60px;
 }
+
 .temple-card {
     flex-basis: 21%;
     margin-left: 18%;
@@ -220,54 +225,58 @@ section h2 {
     margin-bottom: 50px;
     box-shadow: 5px 5px 15px rgb(220, 134, 4);
 }
-.temple-card img{
+
+.temple-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.temple-card img:hover{
+
+.temple-card img:hover {
     transform: scale(1.15);
 }
-.temple-card p{
+
+.temple-card p {
     color: red;
 }
 
-.overlay1{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.8); /* black with 50% opacity */
-  z-index: 999;
-  display: none;
+.overlay1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* black with 50% opacity */
+    z-index: 999;
+    display: none;
 }
 
 .popup1 {
-  position: fixed;
-  top: 50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 600px;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-  display: none;
-  color: #333;
-  font-family: 'Segoe UI', sans-serif;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    display: none;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
     border-radius: 5px;
-  max-height: 90vh;
-  overflow-y: auto; 
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 
-.overlay1 button{
+.overlay1 button {
     width: 90px;
     height: 40px;
-    background-color:darkmagenta ;
+    background-color: darkmagenta;
     color: white;
     border: none;
     border-radius: 3px;
@@ -276,41 +285,46 @@ section h2 {
     cursor: pointer;
 }
 
-.popup1 h1{
-    text-align:  center;
+.popup1 h1 {
+    text-align: center;
     margin-top: 40px;
     color: rgb(225, 44, 12);
     margin-bottom: 20px;
 }
-.popup1 h3{
+
+.popup1 h3 {
     margin-left: 50px;
-    color:rgb(13, 131, 194);
+    color: rgb(13, 131, 194);
     margin-bottom: 10px;
 }
-.popup1 p{
+
+.popup1 p {
     margin-left: 50px;
     color: rgb(53, 7, 110);
     margin-bottom: 10px;
 }
-.popup1 span{
+
+.popup1 span {
     color: rgb(201, 25, 128);
     font-weight: bold;
 }
 
 /* park */
 
-.parks h1{
-    color:rgb(144, 214, 45) ;
+.parks h1 {
+    color: rgb(144, 214, 45);
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
 }
-.park-list{
+
+.park-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.park-card{
+
+.park-card {
     flex-basis: 21%;
     margin-left: 18%;
     text-align: center;
@@ -318,32 +332,37 @@ section h2 {
     border: 2px solid pink;
     box-shadow: 5px 5px 15px rgb(144, 214, 45);
 }
-.park-card img{
+
+.park-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.park-card img:hover{
+
+.park-card img:hover {
     transform: scale(1.15);
 }
-.park-card p{
+
+.park-card p {
     color: red;
 }
 
 /* beach */
 
-.beach h1{
+.beach h1 {
     color: rgb(4, 162, 186);
     text-align: center;
     margin-top: 50px;
     margin-bottom: 70px;
 }
-.beach-list{
+
+.beach-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.beach-card{
+
+.beach-card {
     flex-basis: 21%;
     margin-left: 18%;
     margin-bottom: 50px;
@@ -352,31 +371,37 @@ section h2 {
     border: 2px solid pink;
     box-shadow: 5px 5px 20px rgb(4, 162, 186);
 }
-.beach-card img{
+
+.beach-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.beach-card img:hover{
+
+.beach-card img:hover {
     transform: scale(1.15);
 }
-.beach-card p{
+
+.beach-card p {
     color: red;
 }
+
 /* theater*/
 
-.theater h1{
+.theater h1 {
     color: navy;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 10px;
 }
-.theater-list{
+
+.theater-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.theater-card{
+
+.theater-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -385,30 +410,36 @@ section h2 {
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 10px 40px navy;
 }
-.theater-card img{
+
+.theater-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.theater-card img:hover{
+
+.theater-card img:hover {
     transform: scale(1.15);
 }
-.theater-card p{
+
+.theater-card p {
     color: red;
 }
+
 /* waterfall*/
 
-.waterfall h1{
+.waterfall h1 {
     color: rgb(75, 182, 236);
     text-align: center;
     margin-top: 50px;
 }
-.waterfall-list{
+
+.waterfall-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.waterfall-card{
+
+.waterfall-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -417,31 +448,36 @@ section h2 {
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 10px 40px rgb(75, 182, 236);
 }
-.waterfall-card img{
+
+.waterfall-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.waterfall-card img:hover{
+
+.waterfall-card img:hover {
     transform: scale(1.15);
 }
-.waterfall-card p{
+
+.waterfall-card p {
     color: red;
 }
 
-/* mall*/ 
+/* mall*/
 
-.mall h1{
+.mall h1 {
     color: purple;
     text-align: center;
     margin-top: 50px;
 }
-.mall-list{
+
+.mall-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.mall-card{
+
+.mall-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -450,31 +486,36 @@ section h2 {
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 1px 40px purple;
 }
-.mall-card img{
+
+.mall-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.mall-card img:hover{
+
+.mall-card img:hover {
     transform: scale(1.15);
 }
-.mall-card p{
+
+.mall-card p {
     color: red;
 }
 
-/* Hill station*/ 
+/* Hill station*/
 
-.hill h1{
-    color:rgb(7, 179, 167);
+.hill h1 {
+    color: rgb(7, 179, 167);
     text-align: center;
     margin-top: 50px;
 }
-.hill-list{
+
+.hill-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.hill-card{
+
+.hill-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -483,31 +524,36 @@ section h2 {
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 0px 0px 30px rgb(7, 179, 167);
 }
-.hill-card img{
+
+.hill-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.hill-card img:hover{
+
+.hill-card img:hover {
     transform: scale(1.15);
 }
-.hill-card p{
+
+.hill-card p {
     color: red;
 }
 
-/* Garden*/ 
+/* Garden*/
 
-.garden h1{
-    color:plum;
+.garden h1 {
+    color: plum;
     text-align: center;
     margin-top: 50px;
 }
-.garden-list{
+
+.garden-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.garden-card{
+
+.garden-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -516,30 +562,36 @@ section h2 {
     border: 1px solid plum;
     box-shadow: 10px 10px 60px plum;
 }
-.garden-card img{
+
+.garden-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.garden-card img:hover{
+
+.garden-card img:hover {
     transform: scale(1.15);
 }
-.garden-card p{
+
+.garden-card p {
     color: red;
 }
-/* zoo*/ 
 
-.zoo h1{
+/* zoo*/
+
+.zoo h1 {
     color: red;
     text-align: center;
     margin-top: 50px;
 }
-.zoo-list{
+
+.zoo-list {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
 }
-.zoo-card{
+
+.zoo-card {
     text-align: center;
     margin-bottom: 40px;
     flex-basis: 21%;
@@ -548,21 +600,126 @@ section h2 {
     border: 1px solid rgb(228, 170, 13);
     box-shadow: 10px 10px 40px rgb(130, 9, 29);
 }
-.zoo-card img{
+
+.zoo-card img {
     width: 280px;
     height: 240px;
     transition: 1s;
 }
-.zoo-card img:hover{
+
+.zoo-card img:hover {
     transform: scale(1.15);
 }
-.zoo-card p{
+
+.zoo-card p {
     color: red;
 }
 
+.contact-container {
+    padding: 50px 20px;
+    background: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #0a63cd;
+    margin-bottom: 30px;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-form,
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #0a63cd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.contact-info {
+    margin-left: 20%;
+    margin-top: 8%;
+}
+
+.contact-form button:hover {
+    background-color: #094aa3;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.contact-info p {
+    margin: 18px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.telegram {
+    color: #0088cc;
+}
+
+.instagram {
+    color: #e4405f;
+}
+
+.youtube {
+    color: #ff0000;
+}
 
 /* media query */
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
     .toggle {
         display: block;
     }
@@ -576,256 +733,256 @@ section h2 {
         margin-top: 40px;
     }
 
-    .place-image img {
-        margin-left: 80px;
-    }
-    .places{
-        margin-left: 60px;
+    .temple-list,
+    .park-list,
+    .beach-list,
+    .garden-list,
+    .hill-list,
+    .zoo-list,
+    .waterfall-list,
+    .theater-list,
+    .mall-list {
+        justify-content: center;
     }
 
-    .place-image p {
-        margin-left: 50px;
-    } 
-    .temple-card{
-        margin-left: 140px;
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .garden-card,
+    .hill-card,
+    .mall-card,
+    .theater-card,
+    .waterfall-card,
+    .zoo-card {
+        flex-basis: 38%;
+        margin-right: 20%;
     }
-    .parks h1{
-        width: 90%;
-        margin-left: 5%;
+
+    .places a {
+        margin-left: 25%;
     }
-    .park-card{
-        margin-left: 140px;
+
+    .popup1 {
+        width: 50%;
     }
-     .beach-card{
-        margin-left: 140px;
-    }
-     .theater-card{
-        margin-left: 145px;
-    }
-     .waterfall-card{
-        margin-left: 140px;
-    }
-     .mall-card{
-        margin-left: 140px;
-    }
-    .mall h1{
-        width: 80%;
-        margin-left: 10%;
-    }
-     .garden-card{
-        margin-left: 140px;
-    }
-     .hill-card{
-        margin-left: 140px;
-    }
-     .zoo-card{
-        margin-left: 140px;
-    }
-    .popup1{
-        width: 60%;
-    }
+
 }
- 
 
 @media screen and (max-width: 1100px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 130px;
-  }
-  .popup1 {
-    width: 80%;
-  }
 
-   .container2 .text {
-   position: absolute;
-   top: 20%;
-   width: 55%;
-   left: 2%;
-  }
-  .places{
-    margin-left: 15%;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 130px;
+    }
+
+    .popup1 {
+        width: 80%;
+    }
+
+    .container2 .text {
+        position: absolute;
+        top: 20%;
+        width: 55%;
+        left: 2%;
+    }
+
+    .places {
+        margin-left: 15%;
+    }
 }
 
 /* 900 */
 @media screen and (max-width: 900px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 80px;
-  }
-  .popup1 {
-    width: 80%;
-  }
 
-   .container2 .text {
-   position: absolute;
-   top: 20%;
-   width: 55%;
-   left: 2%;
-  }
-  .places{
-    margin-left: 20px;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 80px;
+    }
+
+    .popup1 {
+        width: 80%;
+    }
+
+    .container2 .text {
+        position: absolute;
+        top: 20%;
+        width: 55%;
+        left: 2%;
+    }
+
+    .places {
+        margin-left: 20px;
+    }
 }
 
 /* 800 */
 @media screen and (max-width: 800px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 80px;
-  }
-  .popup1 {
-    width: 80%;
-  }
 
-   .container2 .text {
-   position: absolute;
-   top: 30%;
-   width: 55%;
-   left: 2%;
-  }
-  .places{
-    margin-left: 0px;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 80px;
+    }
+
+    .popup1 {
+        width: 80%;
+    }
+
+    .container2 .text {
+        position: absolute;
+        top: 30%;
+        width: 55%;
+        left: 2%;
+    }
+
+    .places {
+        margin-left: 0px;
+    }
 }
 
 /* 600px */
 @media screen and (max-width: 600px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 100px;
-  }
-  .popup1 {
-    width: 70%;
-  }
+
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 100px;
+    }
+
+    .popup1 {
+        width: 70%;
+    }
 }
 
 /* 500px */
 @media screen and (max-width: 500px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 80px;
-  }
-  .popup1 {
-    width: 80%;
-  }
 
-   .container2 .text {
-   position: absolute;
-   top: 30%;
-   width: 75%;
-   left: 30px;
-  }
-  .places{
-    margin-left: -0px;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 80px;
+    }
+
+    .popup1 {
+        width: 80%;
+    }
+
+    .container2 .text {
+        position: absolute;
+        top: 20%;
+        width: 65%;
+        left: 0px;
+    }
+
+    .places {
+        margin-left: -40px;
+    }
 }
 
 /* 400px */
 @media screen and (max-width: 400px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 50px;
-  }
 
-  .popup1 {
-    width: 85%;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 50px;
+    }
 
-  .place-image img {
-    margin-left: 40px;
-  }
+    .popup1 {
+        width: 85%;
+    }
 
-  .place-image p {
-    margin-left: 30px;
-  }
+    .place-image img {
+        margin-left: 40px;
+    }
 
-  .container2 .text {
-   position: absolute;
-   top: 25%;
-   width: 65%;
-   left: 5px;
-  }
-  .places{
-    margin-left: -25px;
-  }
+    .place-image p {
+        margin-left: 30px;
+    }
+
+    .container2 .text {
+        position: absolute;
+        top: 25%;
+        width: 65%;
+        left: 0px;
+    }
+
+    .places {
+        margin-left: -20px;
+        width: 20px;
+    }
 }
 
 /* 300px */
 @media screen and (max-width: 300px) {
-  .temple-card,
-  .park-card,
-  .beach-card,
-  .theater-card,
-  .waterfall-card,
-  .mall-card,
-  .garden-card,
-  .hill-card,
-  .zoo-card {
-    margin-left: 20px;
-  }
 
-  .popup1 {
-    width: 90%;
-  }
+    .temple-card,
+    .park-card,
+    .beach-card,
+    .theater-card,
+    .waterfall-card,
+    .mall-card,
+    .garden-card,
+    .hill-card,
+    .zoo-card {
+        margin-left: 20px;
+    }
 
-  .place-image img {
-    margin-left: 20px;
-    width: 90%;
-  }
+    .popup1 {
+        width: 90%;
+    }
 
-  .place-image p {
-    margin-left: 10px;
-    font-size: 12px;
-  }
+    .place-image img {
+        margin-left: 20px;
+        width: 90%;
+    }
 
-  .container2 .text {
-    margin-left: 0;
-    padding: 0 5px;
-    font-size: 14px;
-  }
+    .place-image p {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+
+    .container2 .text {
+        margin-left: 0;
+        padding: 0 5px;
+        font-size: 14px;
+    }
 }
-
-
