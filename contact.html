@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple</title>
+  <link rel="stylesheet" href="place.css">
+  <!--Font Awesome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--Navbar-->
+  <div class="container1">
+    <div class="header">
+      <h1>WonderAtlas</h1>
+    </div>
+    <div class="nav">
+      <p class="nav-links"><a href="index.html">Home</a></p>
+      <p class="nav-links"><a href="explore.html">Explore</a></p>
+      <p class="nav-links"><a href="temple.html">Categories</a></p>
+      <p class="nav-links"><a href="contact.html">Contact</a></p>
+    </div>
+    <div class="toggle" onclick="opentoggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!--Side navbar-->
+  <div class="sidenav" id="sidebar">
+    <div class="closetoggle" onclick="closedtoggle()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="side-nav">
+      <p class="sidenav-links"><a href="index.html">Home</a></p>
+      <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+      <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+      <p class="sidenav-links"><a href="contact.html">Contact</a></p>
+    </div>
+  </div>
+
+
+<div class="contact-container">
+  <h2>Contact Us</h2>
+
+  <div class="contact-content">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <button type="submit" onclick="sendMessage()" id="send">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Company Details -->
+    <div class="contact-info">
+      <h3>WonderAtlas</h3>
+      <p><strong>Email:</strong> wonderatlas@gmail.com</p>
+      <p><strong>Phone:</strong> +91 98765 43210</p>
+      <p><strong>Location:</strong> Tamil Nadu, India</p>
+      <div class="social-icons">
+        <a href="#" class="icon telegram" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="#" class="icon instagram" title="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon youtube" title="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    var send=document.getElementById('send')
+    function sendMessage(){
+        alert("Send message succesfully")
+    }
+</script>
