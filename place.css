@@ -637,8 +637,6 @@ section h2 {
     max-width: 1000px;
     margin: auto;
 }
-
-.contact-form,
 .contact-info {
     flex: 1;
     min-width: 300px;
@@ -946,7 +944,7 @@ section h2 {
     }
 
     .places {
-        margin-left: -20px;
+        margin-left: 20px;
         width: 20px;
     }
 }
