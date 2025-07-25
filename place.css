@@ -437,8 +437,8 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 40px;
-    border: 1px solid gold;
-    box-shadow: 5px 10px 40px gold;
+    border: 1px solid rgb(59, 108, 231);
+    box-shadow: 5px 10px 40px rgb(59, 108, 231);
     padding-bottom: 15px;
 }
 
@@ -449,7 +449,7 @@ section h2 {
 }
 .theater-card button{
     padding: 10px;
-     background-color: navy; 
+     background-color: rgb(59, 108, 231); 
      color: white; 
      border: none;
      cursor: pointer;
@@ -681,7 +681,7 @@ section h2 {
 }
 .zoo-card button{
     padding: 10px;
-     background-color:rgb(130,9,29); 
+     background-color:rgb pink; 
      color: white; 
      border: none;
      cursor: pointer;
