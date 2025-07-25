@@ -437,8 +437,8 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 40px;
-    border: 1px solid rgb(59, 108, 231);
-    box-shadow: 5px 10px 40px rgb(59, 108, 231);
+    border: 1px solid lightblue;
+    box-shadow: 5px 10px 40px lightblue;
     padding-bottom: 15px;
 }
 
@@ -449,7 +449,7 @@ section h2 {
 }
 .theater-card button{
     padding: 10px;
-     background-color: rgb(59, 108, 231); 
+     background-color: lightblue; 
      color: white; 
      border: none;
      cursor: pointer;
