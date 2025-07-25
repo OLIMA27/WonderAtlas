@@ -437,8 +437,8 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 40px;
-    border: 1px solid lightblue;
-    box-shadow: 5px 10px 40px lightblue;
+    border: 1px solid blueviolet;
+    box-shadow: 5px 10px 40px blueviolte;
     padding-bottom: 15px;
 }
 
@@ -449,7 +449,7 @@ section h2 {
 }
 .theater-card button{
     padding: 10px;
-     background-color: lightblue; 
+     background-color: blueviolet; 
      color: white; 
      border: none;
      cursor: pointer;
@@ -675,13 +675,13 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid pink;
-    box-shadow: 10px 10px 40px pink;
+    border: 1px solid lightred;
+    box-shadow: 10px 10px 40px lightred;
     padding-bottom: 15px;
 }
 .zoo-card button{
     padding: 10px;
-     background-color:rgb pink; 
+     background-color:rgb lightred; 
      color: white; 
      border: none;
      cursor: pointer;
