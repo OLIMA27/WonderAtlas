@@ -55,80 +55,78 @@
     <div class="theater-card" onclick="showTheaterDetails('sathyam')">
       <img src="ASSETS2/sathyam th.jpg" alt="Sathyam Cinemas"><br><br>
         <h3>Sathyam Cinemas</h3>
-        <p>Royapettah, Chennai</p><br>
+        <p>Royapettah, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('pvr')">
       <img src="ASSETS2/pvr.jpg" alt="PVR Palazzo" style="width: 280px; height: 250px;"><br><br>
         <h3>PVR Palazzo (Forum Mall)</h3>
-        <p>Vadapalani, Chennai</p><br>
+        <p>Vadapalani, Chennai</p>
+         <button>View Details</button>
       </div>
 
     <div class="theater-card" onclick="showTheaterDetails('escape')">
       <img src="ASSETS/escape th.jpg" alt="Escape Cinemas"><br><br>
         <h3>Escape Cinemas</h3>
-        <p>Express Avenue Mall, Chennai</p><br>
+        <p>Express Avenue Mall, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('inox_arcot')">
       <img src="ASSETS/inox th.jpg" alt="INOX National"><br><br>
         <h3>INOX National</h3>
-        <p>Arcot Road, Chennai</p><br>
+        <p>Arcot Road, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('ags')">
       <img src="ASSETS/agsth.jpg" alt="AGS Cinemas"><br><br>
         <h3>AGS Cinemas</h3>
-        <p>Chennai (OMR, Villivakkam)</p><br>
+        <p>Chennai (OMR, Villivakkam)</p>
+         <button>View Details</button>
     </div>
     <div class="theater-card" onclick="showTheaterDetails('inox_brookefields')">
       <img src="ASSETS/inox3.jpg" alt="INOX-Brookefields"><br><br>
         <h3>INOX-Brookefields Mall</h3>
-        <p> Coimbatore</p><br>
+        <p> Coimbatore</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('rohini')">
       <img src="ASSETS2/rohini th.jpg" alt="Rohini Silver Screens"><br><br>
         <h3>Rohini Silver Screens</h3>
-        <p>Koyambedu, Chennai</p><br>
+        <p>Koyambedu, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('devi')">
       <img src="ASSETS/devi th.jpg" alt="Devi Cineplex"><br><br>
         <h3>Devi Complex</h3>
-        <p>Mount Road, Chennai</p><br>
+        <p>Mount Road, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('sangam')">
       <img src="ASSETS2/sangam th.jpg" alt="Sangam Cinemas"><br><br>
         <h3>Sangam Cinemas</h3>
-        <p>Kilpauk, Chennai</p><br>
+        <p>Kilpauk, Chennai</p>
+         <button>View Details</button>
     </div>
 
     <div class="theater-card" onclick="showTheaterDetails('inox_prozone')">
       <img src="ASSETS/inox2.jpg" alt="INOX Prozone" style="width: 280px; height: 220px;"><br><br>
         <h3>INOX-Prozone Mall</h3>
-        <p>Coimbatore</p><br>
+        <p>Coimbatore</p> <button>View Details</button>
     </div>
-
-    
   </div>
-
- 
    <div class="overlay1" id="overlay" onclick="closePopup()"></div>
-
-
 <div class="popup1" id="popup">
   <!-- <button class="close-btn" onclick="closePopup()">X</button> -->
    <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
   <div id="popup-content"></div>
 </div>
-
-
-
   <script>
-
-
  function showPopup(content) {
   document.getElementById("popup-content").innerHTML = content;
   document.getElementById("overlay").style.display = "block";
@@ -141,9 +139,6 @@ function closepopup() {
   document.getElementById("popup").style.display = "none";
   document.body.style.overflow = "auto"; // Re-enable scrolling
 }
-
-
-
 const theaters = {
   sathyam: {
     name: "Sathyam Cinemas",
