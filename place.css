@@ -221,7 +221,7 @@ section h2 {
 .temple-card {
     flex-basis: 21%;
     margin-left: 18%;
-    border: 2px solid rgb(220,134,4);
+    border: 1px solid rgb(220,134,4);
     margin-bottom: 50px;
     box-shadow: 5px 5px 15px rgb(220, 134, 4);
     padding-bottom: 15px;
@@ -340,7 +340,7 @@ section h2 {
     margin-left: 18%;
     text-align: center;
     margin-bottom: 40px;
-    border: 2px solid pink;
+    border: 2px solid rgb(144,214,45);
     padding-bottom: 15px;
     box-shadow: 5px 5px 15px rgb(144, 214, 45);
 }
@@ -437,8 +437,8 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 40px;
-    border: 1px solid navy;
-    box-shadow: 5px 10px 40px navy;
+    border: 1px solid gold;
+    box-shadow: 5px 10px 40px gold;
     padding-bottom: 15px;
 }
 
@@ -675,8 +675,8 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid rgb(130,9, 29);
-    box-shadow: 10px 10px 40px rgb(130, 9, 29);
+    border: 1px solid pink;
+    box-shadow: 10px 10px 40px pink;
     padding-bottom: 15px;
 }
 .zoo-card button{
