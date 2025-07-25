@@ -221,7 +221,7 @@ section h2 {
 .temple-card {
     flex-basis: 21%;
     margin-left: 18%;
-    border: 2px solid skyblue;
+    border: 2px solid rgb(220,134,4);
     margin-bottom: 50px;
     box-shadow: 5px 5px 15px rgb(220, 134, 4);
     padding-bottom: 15px;
@@ -388,7 +388,7 @@ section h2 {
     margin-bottom: 50px;
     text-align: center;
     margin-bottom: 40px;
-    border: 2px solid pink;
+    border: 2px solid rgb(4,162,186);
     padding-bottom: 20px;
     box-shadow: 5px 5px 20px rgb(4, 162, 186);
 }
@@ -437,7 +437,7 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 40px;
-    border: 1px solid rgb(44, 175, 223);
+    border: 1px solid navy;
     box-shadow: 5px 10px 40px navy;
     padding-bottom: 15px;
 }
@@ -484,7 +484,7 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid rgb(44, 175, 223);
+    border: 1px solid rgb(75, 182, 236);
     box-shadow: 5px 10px 40px rgb(75, 182, 236);
     padding-bottom: 15px;
 }
@@ -532,7 +532,7 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid rgb(44, 175, 223);
+    border: 1px solid purple;
     box-shadow: 5px 1px 40px purple;
     padding-bottom: 15px;
 }
@@ -579,7 +579,7 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid rgb(44, 175, 223);
+    border: 1px solid rgb(7, 179, 167);
     padding-bottom: 15px;
     box-shadow: 0px 0px 30px rgb(7, 179, 167);
 }
@@ -675,7 +675,7 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid rgb(228, 170, 13);
+    border: 1px solid rgb(130,9, 29);
     box-shadow: 10px 10px 40px rgb(130, 9, 29);
     padding-bottom: 15px;
 }
