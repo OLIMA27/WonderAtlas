@@ -675,13 +675,13 @@ section h2 {
     flex-basis: 21%;
     margin-left: 18%;
     margin-top: 80px;
-    border: 1px solid lightcoral;
-    box-shadow: 10px 10px 40px lightcoral;
+    border: 1px solid palevioletred;
+    box-shadow: 10px 10px 40px palevioletred;
     padding-bottom: 15px;
 }
 .zoo-card button{
     padding: 10px;
-     background-color:rgb lightcoral; 
+     background-color:rgb palevioletred; 
      color: white; 
      border: none;
      cursor: pointer;
