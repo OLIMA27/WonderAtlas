@@ -231,13 +231,21 @@ section h2 {
     height: 240px;
     transition: 1s;
 }
-
+.temple-card button{
+    padding: 10px;
+     background-color: rgb(220,134,4); 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 .temple-card img:hover {
     transform: scale(1.15);
 }
 
 .temple-card p {
     color: red;
+    padding-bottom:20px;
 }
 
 .overlay1 {
@@ -330,6 +338,7 @@ section h2 {
     text-align: center;
     margin-bottom: 40px;
     border: 2px solid pink;
+    padding-bottom:20px;
     box-shadow: 5px 5px 15px rgb(144, 214, 45);
 }
 
@@ -338,13 +347,21 @@ section h2 {
     height: 240px;
     transition: 1s;
 }
-
+.park-card button{
+    padding: 10px;
+     background-color: rgb(144,214,45); 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 .park-card img:hover {
     transform: scale(1.15);
 }
 
 .park-card p {
     color: red;
+    padding-bottom:5px;
 }
 
 /* beach */
