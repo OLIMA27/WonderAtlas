@@ -224,6 +224,7 @@ section h2 {
     border: 2px solid skyblue;
     margin-bottom: 50px;
     box-shadow: 5px 5px 15px rgb(220, 134, 4);
+    padding-bottom: 15px;
 }
 
 .temple-card img {
@@ -233,7 +234,7 @@ section h2 {
 }
 .temple-card button{
     padding: 10px;
-     background-color: rgb(220,134,4); 
+     background-color:rgb(220, 134, 4); 
      color: white; 
      border: none;
      cursor: pointer;
@@ -245,7 +246,7 @@ section h2 {
 
 .temple-card p {
     color: red;
-    padding-bottom:20px;
+    padding-bottom: 5px;
 }
 
 .overlay1 {
@@ -328,6 +329,8 @@ section h2 {
 
 .park-list {
     display: flex;
+    gap: 20px;
+    text-align: center;
     flex-wrap: wrap;
     gap: 60px;
 }
@@ -338,7 +341,7 @@ section h2 {
     text-align: center;
     margin-bottom: 40px;
     border: 2px solid pink;
-    padding-bottom:20px;
+    padding-bottom: 15px;
     box-shadow: 5px 5px 15px rgb(144, 214, 45);
 }
 
@@ -361,7 +364,7 @@ section h2 {
 
 .park-card p {
     color: red;
-    padding-bottom:5px;
+    padding-bottom: 5px;
 }
 
 /* beach */
@@ -386,8 +389,16 @@ section h2 {
     text-align: center;
     margin-bottom: 40px;
     border: 2px solid pink;
+    padding-bottom: 20px;
     box-shadow: 5px 5px 20px rgb(4, 162, 186);
-    padding-bottom:20px;
+}
+.beach-card button{
+    padding: 10px;
+     background-color: skyblue; 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
 }
 
 .beach-card img {
@@ -399,14 +410,7 @@ section h2 {
 .beach-card img:hover {
     transform: scale(1.15);
 }
-.beach-card button{
-    padding: 10px;
-     background-color: skyblue; 
-     color: white; 
-     border: none;
-     cursor: pointer;
-     border-radius: 5px;
-}
+
 .beach-card p {
     color: red;
     padding-bottom: 5px;
@@ -435,6 +439,7 @@ section h2 {
     margin-top: 40px;
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 10px 40px navy;
+    padding-bottom: 15px;
 }
 
 .theater-card img {
@@ -442,13 +447,21 @@ section h2 {
     height: 240px;
     transition: 1s;
 }
-
+.theater-card button{
+    padding: 10px;
+     background-color: navy; 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 .theater-card img:hover {
     transform: scale(1.15);
 }
 
 .theater-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 /* waterfall*/
@@ -473,6 +486,7 @@ section h2 {
     margin-top: 80px;
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 10px 40px rgb(75, 182, 236);
+    padding-bottom: 15px;
 }
 
 .waterfall-card img {
@@ -484,9 +498,18 @@ section h2 {
 .waterfall-card img:hover {
     transform: scale(1.15);
 }
+.waterfall-card button{
+    padding: 10px;
+     background-color: rgb(75, 182, 236); 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 
 .waterfall-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 /* mall*/
@@ -511,6 +534,7 @@ section h2 {
     margin-top: 80px;
     border: 1px solid rgb(44, 175, 223);
     box-shadow: 5px 1px 40px purple;
+    padding-bottom: 15px;
 }
 
 .mall-card img {
@@ -522,9 +546,17 @@ section h2 {
 .mall-card img:hover {
     transform: scale(1.15);
 }
-
+.mall-card button{
+    padding: 10px;
+     background-color: purple; 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 .mall-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 /* Hill station*/
@@ -548,6 +580,7 @@ section h2 {
     margin-left: 18%;
     margin-top: 80px;
     border: 1px solid rgb(44, 175, 223);
+    padding-bottom: 15px;
     box-shadow: 0px 0px 30px rgb(7, 179, 167);
 }
 
@@ -560,9 +593,18 @@ section h2 {
 .hill-card img:hover {
     transform: scale(1.15);
 }
+.hill-card button{
+    padding: 10px;
+     background-color: rgb(7, 179, 167); 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 
 .hill-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 /* Garden*/
@@ -587,6 +629,7 @@ section h2 {
     margin-top: 80px;
     border: 1px solid plum;
     box-shadow: 10px 10px 60px plum;
+    padding-bottom: 15px;
 }
 
 .garden-card img {
@@ -598,9 +641,18 @@ section h2 {
 .garden-card img:hover {
     transform: scale(1.15);
 }
+.garden-card button{
+    padding: 10px;
+     background-color: plum; 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 
 .garden-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 /* zoo*/
@@ -625,8 +677,16 @@ section h2 {
     margin-top: 80px;
     border: 1px solid rgb(228, 170, 13);
     box-shadow: 10px 10px 40px rgb(130, 9, 29);
+    padding-bottom: 15px;
 }
-
+.beach-card button{
+    padding: 10px;
+     background-color:rgb(130,9,29); 
+     color: white; 
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}
 .zoo-card img {
     width: 280px;
     height: 240px;
@@ -639,6 +699,7 @@ section h2 {
 
 .zoo-card p {
     color: red;
+    padding-bottom: 5px;
 }
 
 .contact-container {
@@ -663,6 +724,8 @@ section h2 {
     max-width: 1000px;
     margin: auto;
 }
+
+.contact-form,
 .contact-info {
     flex: 1;
     min-width: 300px;
@@ -803,8 +866,7 @@ section h2 {
     .garden-card,
     .hill-card,
     .zoo-card {
-        margin-left: 130px;
-    }
+        margin-left: 130px; }
 
     .popup1 {
         width: 80%;
@@ -866,7 +928,9 @@ section h2 {
     .hill-card,
     .zoo-card {
         margin-left: 80px;
+        flex-basis: 20%;
     }
+
 
     .popup1 {
         width: 80%;
