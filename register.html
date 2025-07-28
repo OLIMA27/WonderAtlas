@@ -1,0 +1,107 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beach</title>
+  <link rel="stylesheet" href="place.css">
+  <!--Font Awesome icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google Font - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--Navbar-->
+  <div class="container1">
+    <div class="header">
+      <h1>WonderAtlas</h1>
+    </div>
+    <div class="nav">
+      <p class="nav-links"><a href="index.html">Home</a></p>
+      <p class="nav-links"><a href="explore.html">Explore</a></p>
+      <p class="nav-links"><a href="temple.html">Categories</a></p>
+      <p class="nav-links"><a href="contact.html">Contact</a></p>
+       <p class="nav-links"><a href="register.html">Register</a></p>
+    </div>
+    <div class="toggle" onclick="opentoggle()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+
+  <!--Side navbar-->
+  <div class="sidenav" id="sidebar">
+    <div class="closetoggle" onclick="closedtoggle()">
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    <div class="side-nav">
+      <p class="sidenav-links"><a href="index.html">Home</a></p>
+      <p class="sidenav-links"><a href="explore.html">Explore</a></p>
+      <p class="sidenav-links"><a href="temple.html">Categories</a></p>
+      <p class="sidenav-links"><a href="contact.html">Contact</a></p>
+       <p class="sidenav-links"><a href="register.html">Register</a></p>
+    </div>
+  </div>
+
+
+
+
+
+  <form class="register-form">
+    <h2>Register Your Visit</h2>
+
+    <label for="name"> Name</label>
+    <input type="text" id="name" name="name" required placeholder="Your Name">
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number">
+
+    <label for="email">Email ID</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="place-type">Type of Place</label>
+    <select id="place-type" name="place-type" required>
+      <option value="">--Select--</option>
+      <option value="Temple">Temple</option>
+      <option value="Park">Park</option>
+      <option value="Beach">Beach</option>
+      <option value="Waterfall">Waterfall</option>
+      <option value="Theater">Theater</option>
+      <option value="ShoppingMall">ShoppingMall</option>
+      <option value="Zoo">Zoo</option>
+      <option value="HillStation">HillStation</option>
+      <option value="Garden">Garden</option>
+    </select>
+
+    <label for="place-name">Place Name</label>
+    <input type="text" id="place-name" name="place-name" placeholder="e.g., Meenakshi Temple" required>
+
+    <label for="visit-date">Visit Date</label>
+    <input type="date" id="visit-date" name="visit-date" required>
+
+      <button type="submit" id="send" onclick="register()">Register</button>
+  </form>
+
+
+
+  <script>
+
+      var senddata=document.getElementById('send')
+    function register(){
+        alert("Registration successful! Thank you for registering.")
+    }
+  </script>
+
+  <script src="place.js"></script>
+</body>
+</html>
+
+
+
+
+
