@@ -25,6 +25,7 @@
       <p class="nav-links"><a href="explore.html">Explore</a></p>
       <p class="nav-links"><a href="temple.html">Categories</a></p>
       <p class="nav-links"><a href="contact.html">Contact</a></p>
+       <p class="nav-links"><a href="register.html">Register</a></p>
     </div>
     <div class="toggle" onclick="opentoggle()">
       <i class="fa-solid fa-bars"></i>
@@ -41,6 +42,7 @@
       <p class="sidenav-links"><a href="explore.html">Explore</a></p>
       <p class="sidenav-links"><a href="temple.html">Categories</a></p>
       <p class="sidenav-links"><a href="contact.html">Contact</a></p>
+       <p class="sidenav-links"><a href="register.html">Register</a></p>
     </div>
   </div>
 
@@ -51,21 +53,20 @@
     <h1>Divine Temples of Tamil Nadu</h1>
   </div>
   <div class="temple-list">
+      <div class="temple-card" id="meenakshi" onclick="showTempleDetails('meenakshi')">
+        <img src="ASSETS1/meenakshi temple.jpg" alt="Meenakshi Temple"><br><br>
+        <h3>Meenakshi Temple</h3>
+        <p>Madurai, Tamil Nadu</p>
+        <button>View Details</button>
+      </div>
 
-    <div class="temple-card" id="meenakshi" onclick="showTempleDetails('meenakshi')">
-      <img src="ASSETS1/meenakshi temple.jpg" alt="Meenakshi Temple"><br><br>
-      <h3>Meenakshi Temple</h3>
-      <p>Madurai, Tamil Nadu</p>
-       <button>View Details</button>
-      <br>
-    </div>
 
 
     <div class="temple-card" id="brihadesswarar" onclick="showTempleDetails('brihadeeswarar')">
       <img src="ASSETS/brihadesswarar temple.jpg" alt="Brihadeeswarar Temple"><br><br>
       <h3>Brihadeeswarar Temple</h3>
       <p>Thanjavur, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
 
@@ -73,49 +74,49 @@
       <img src="ASSETS2/ramanathaswamy temple.jpg" alt="Ramanathaswamy Temple"><br><br>
       <h3>Ramanathaswamy Temple</h3>
       <p>Rameswaram, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
     <div class="temple-card" id="kailasanatha" onclick="showTempleDetails('kailasanatha')">
       <img src="ASSETS1/kailasanatha temple.jpg" alt="Kanchi Kailasanathar Temple"><br><br>
       <h3>Kanchi Kailasanathar</h3>
       <p>Kanchipuram, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
     <div class="temple-card" id="shore" onclick="showTempleDetails('shore')">
       <img src="ASSETS2/shore temple.jpg" alt="Shore Temple"><br><br>
       <h3>Shore Temple</h3>
       <p>Mahabalipuram, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
     <div class="temple-card" id="ekambareswarar" onclick="showTempleDetails('ekambareswarar')">
       <img src="ASSETS/ekambareswarar  temple.jpg" alt="Ekambareswarar Temple"><br><br>
       <h3>Ekambareswarar Temple</h3>
       <p>Kanchipuram, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
     <div class="temple-card" id="thillai" onclick="showTempleDetails('thillai')">
       <img src="ASSETS2/thillai natraj.jpg" alt="Thillai Nataraja Temple"><br><br>
       <h3>Thillai Nataraja Temple</h3>
       <p>Chidambaram, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
 
     </div>
     <div class="temple-card" id="Murugan" onclick="showTempleDetails('Murugan')">
       <img src="ASSETS2/palani temple.jpg" alt="Murugan Temple" style="width: 290px;">
       <h3>Palani Murugan Temple</h3><br>
       <p>Palani, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
 
     <div class="temple-card" id="jambukeshwarar" onclick="showTempleDetails('jambukeshwarar')">
       <img src="ASSETS/jambukeshwarar temple.jpg" alt="Jambukeswarar Temple"><br><br>
       <h3>Jambukeswarar Temple</h3>
       <p>Tiruchirapalli, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
 
     </div>
 
@@ -123,399 +124,404 @@
       <img src="ASSETS/annamalaiyar temple.jpg" alt="Annamalaiyar Temple"><br><br>
       <h3>Annamalaiyar Temple</h3>
       <p>Tiruvannamalai, Tamil Nadu</p>
-       <button>View Details</button>
+      <button>View Details</button>
     </div>
   </div>
 
 
-    <div class="overlay1" onclick="closepopup()" style="display: none; "></div>
-
-<div class="popup1" style="display: none; ">
-  <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
-  <h1 id="popup-name"></h1> 
-  <div id="popup-about"></div>
-  <div id="popup-arch"></div>
-  <div id="popup-festival"></div>
-  <div id="popup-tips"></div>
-  <div id="popup-location"></div>
-</div>
+ <a href="register.html"> <div class="register">
+    <button>REGISTER</button>
+  </div></a>
 
 
-<script>
-const temples = {
-  meenakshi: {
-    name: "Meenakshi Amman Temple",
-    about: `
+  <div class="overlay1" onclick="closepopup()" style="display: none; "></div>
+
+  <div class="popup1" style="display: none; ">
+    <span onclick="closepopup()" style="cursor: pointer;color: rgb(18, 16, 12);">✖</span>
+    <h1 id="popup-name"></h1>
+    <div id="popup-about"></div>
+    <div id="popup-arch"></div>
+    <div id="popup-festival"></div>
+    <div id="popup-tips"></div>
+    <div id="popup-location"></div>
+  </div>
+
+
+  <script>
+    const temples = {
+      meenakshi: {
+        name: "Meenakshi Amman Temple",
+        about: `
       <h3>About the Temple</h3>
       <p>Meenakshi Amman Temple is one of the most iconic temples in India, known for its devotion, mythology, and
       majestic Dravidian architecture. Built over 2,000 years ago and renovated extensively during the 16th century 
       by the Nayak dynasty, the temple features 14 towering gopurams with over 33,000 sculptures.</p>
     `,
-    arch: `
+        arch: `
       <h3>Architectural Highlights:</h3>
       <p>1. 14 gopurams richly decorated with colorful carvings.</p>
       <p>2. Southern tower is the tallest at 170 feet.</p>
       <p>3. Aayiram Kaal Mandapam-Hall of 1000 musical pillars.</p>
       <p>4. Sacred tank, shrines, and stone carvings.</p>
     `,
-    festivals: `
+        festivals: `
       <h3>Festivals</h3>
       <p><span>Chithirai Festival:</span> Celebrates the divine wedding of Meenakshi and Sundareswarar in April.</p>
       <p><span>Navaratri:</span> 9-day celebration of the Goddess.</p>
       <p><span>Aadi Pooram:</span> Honoring the birth of Meenakshi.</p>
     `,
-    tips: `
+        tips: `
       <h3>Visitor Tips:</h3>
       <p>1. Dress modestly-traditional attire is preferred.</p>
       <p>2. Remove footwear before entering.</p>
       <p>3. Photography allowed in outer corridors only.</p>
       <p>4. Best time to visit: October to March.</p>
     `,
-    location: `
+        location: `
       <h3>Temple Information</h3>
       <p><span>Location:</span> Madurai, Tamil Nadu</p>
       <p><span>Deities:</span> Goddess Meenakshi and Lord Sundareswarar (Shiva)</p>
       <p><span>Timings:</span> 5:00 AM-12:30 PM, 4:00 PM-10:00 PM</p>
       <p><span>Entry Fee:</span> Free (special darshan available)</p>
     `
-  },
+      },
 
-  brihadeeswarar: {
-  name: "Brihadeeswarar Temple",
-  about: `
+      brihadeeswarar: {
+        name: "Brihadeeswarar Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Brihadeeswarar Temple, also known as Peruvudaiyar Kovil or Rajarajeswaram, is a UNESCO World Heritage Site built by Raja Raja Chola I in the 11th century. It is a fine example of Tamil architecture from the Chola dynasty and is one of the largest temples in India.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Massive 216-foot Vimana (tower) above the sanctum, made from a single granite stone.</p>
     <p>2. Nandi statue carved from a single stone, weighing 25 tons.</p>
     <p>3. The temple is built entirely with granite without using binding material.</p>
     <p>4. Intricate frescoes and Chola inscriptions inside the temple.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Maha Shivaratri:</span> Celebrated with great devotion to Lord Shiva.</p>
     <p><span>Raja Raja Chola's Birth Anniversary:</span> Honoring the builder of the temple.</p>
     <p><span>Navaratri:</span> Celebrated with music and dance performances inside the temple premises.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Visit early morning or late evening to avoid heat.</p>
     <p>2. Footwear is not allowed inside the temple complex.</p>
     <p>3. Photography is allowed in open areas but not inside the sanctum.</p>
     <p>4. Explore the museum nearby for more about the Chola Empire.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Thanjavur, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Brihadeeswarar)</p>
     <p><span>Timings:</span> 6:00 AM-12:30 PM, 4:00 PM - 8:30 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-},
- ramanathaswamy: {
-  name: "Ramanathaswamy Temple",
-  about: `
+      },
+      ramanathaswamy: {
+        name: "Ramanathaswamy Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Ramanathaswamy Temple, located on Rameswaram Island, is one of the 12 Jyotirlinga shrines of Lord Shiva. It holds immense significance in Hindu mythology as the place where Lord Rama worshipped Shiva to absolve his sins after the war in Lanka.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Famous for having one of the longest temple corridors in the world (1220 meters).</p>
     <p>2. Exquisite stone carvings and massive gopurams (gateway towers).</p>
     <p>3. 22 sacred theerthams (holy water tanks) inside the temple for ritual bathing.</p>
     <p>4. A blend of Dravidian and Vijayanagara architectural styles.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Mahashivaratri:</span> Celebrated with night-long prayers and special rituals.</p>
     <p><span>Thai Amavasai:</span> Honoring ancestors and attracting pilgrims nationwide.</p>
     <p><span>Navaratri:</span> Special pujas and temple decorations during 9 days.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Bathing in the 22 theerthams is considered auspicious.</p>
     <p>2. Carry an extra set of clothes if planning to take ritual dips.</p>
     <p>3. Wear traditional attire for darshan.</p>
     <p>4. Avoid visiting during peak monsoon season due to water logging.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Rameswaram, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Ramanathaswamy)</p>
     <p><span>Timings:</span> 5:00 AM - 1:00 PM, 3:00 PM - 9:00 PM</p>
     <p><span>Entry Fee:</span> Free (special darshan tickets available)</p>
   `
-},
-kailasanatha: {
-  name: "Kanchi Kailasanathar Temple",
-  about: `
+      },
+      kailasanatha: {
+        name: "Kanchi Kailasanathar Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Kanchi Kailasanathar Temple is the oldest temple in Kanchipuram, dedicated to Lord Shiva. Built by the Pallava dynasty in the 7th century, it is known for its historical and architectural importance, especially as a prototype for later South Indian temples.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Built entirely in sandstone with a pyramidal tower.</p>
     <p>2. Beautiful stone carvings, including 58 small shrines surrounding the main sanctum.</p>
     <p>3. Features early forms of South Indian Dravidian architecture.</p>
     <p>4. Enclosed inner pradakshina (circumambulatory) path for devotees.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Shivaratri:</span> Special poojas and night-long chanting of Shiva mantras.</p>
     <p><span>Panguni Uthiram:</span> Celebrates divine marriages, attracts thousands of devotees.</p>
     <p><span>Chithirai Festival:</span> Processions and cultural programs organized annually.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Visit during early morning to enjoy peace and less crowd.</p>
     <p>2. Photography is allowed in outer areas.</p>
     <p>3. Wear light traditional clothes due to warm weather in Kanchipuram.</p>
     <p>4. Combine with visit to nearby Ekambareswarar Temple.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Kanchipuram, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Kailasanathar)</p>
     <p><span>Timings:</span> 6:00 AM - 12:00 PM, 4:00 PM - 7:00 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-},shore: {
-  name: "Shore Temple",
-  about: `
+      }, shore: {
+        name: "Shore Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>The Shore Temple is a UNESCO World Heritage Site located on the shores of the Bay of Bengal in Mahabalipuram. Built by the Pallava dynasty in the 8th century, it is one of the oldest structural stone temples in South India.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Built using granite blocks directly on the seashore.</p>
     <p>2. Features three shrines—two for Lord Shiva and one for Lord Vishnu.</p>
     <p>3. Intricate carvings and a unique coastal backdrop.</p>
     <p>4. Example of early Dravidian temple architecture.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Mahabalipuram Dance Festival:</span> Held every January with classical performances against the temple backdrop.</p>
     <p><span>Full Moon Poojas:</span> Local celebrations with rituals and lamps.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Best visited in early morning or evening for good lighting and breeze.</p>
     <p>2. Photography is allowed.</p>
     <p>3. Wear light clothes and carry sunscreen and water.</p>
     <p>4. Explore nearby cave temples and rock sculptures.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Mahabalipuram, Tamil Nadu</p>
     <p><span>Deities:</span> Lord Shiva and Lord Vishnu</p>
     <p><span>Timings:</span> 6:00 AM - 6:00 PM</p>
     <p><span>Entry Fee:</span> ₹40 (Indians), ₹600 (foreigners)</p>
   `
-},
+      },
 
-ekambareswarar: {
-  name: "Ekambareswarar Temple",
-  about: `
+      ekambareswarar: {
+        name: "Ekambareswarar Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Ekambareswarar Temple is a massive Shiva temple in Kanchipuram, known as one of the Pancha Bhoota Stalas, representing the element Earth. The temple is revered for its spiritual energy and centuries of history.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. One of the tallest temple towers in South India (59 meters).</p>
     <p>2. A 3500-year-old mango tree with four different types of mangoes.</p>
     <p>3. 1000-pillared hall used for festivals and rituals.</p>
     <p>4. Sprawling complex spread over 25 acres.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Panguni Uthiram:</span> Celestial wedding of Lord Shiva and Parvati.</p>
     <p><span>Shivaratri:</span> Night-long celebrations and poojas.</p>
     <p><span>Vaikasi Visakam:</span> Major chariot festival.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Visit early morning to avoid heat and crowd.</p>
     <p>2. No photography inside the sanctum.</p>
     <p>3. Traditional attire is preferred.</p>
     <p>4. Allocate at least 1 hour to explore the large campus.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Kanchipuram, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Ekambareswarar)</p>
     <p><span>Timings:</span> 6:00 AM - 12:30 PM, 4:00 PM -8:30 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-},
-thillai: {
-  name: "Thillai Nataraja Temple",
-  about: `
+      },
+      thillai: {
+        name: "Thillai Nataraja Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>The Thillai Nataraja Temple in Chidambaram is dedicated to Lord Shiva in the form of Nataraja, the Cosmic Dancer. It's a unique temple where Lord Shiva is represented by both a murti and an empty space (Chidambara Rahasyam).</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Four grand gopurams with exquisite carvings of Bharatanatyam poses.</p>
     <p>2. The Chit Sabha, where the Nataraja idol is enshrined.</p>
     <p>3. The inner sanctum is covered by golden roof plates.</p>
     <p>4. Symbolic architecture representing spiritual truths and Hindu philosophy.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Margazhi Thiruvadhirai:</span> Celebrates Shiva's cosmic dance in December.</p>
     <p><span>Aani Thirumanjanam:</span> Temple's grand abhishekam and rituals in June/July.</p>
     <p><span>Natyanjali Festival:</span> Dance festival attracting performers from across India.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Visit during Margazhi for best spiritual and cultural experience.</p>
     <p>2. Photography restricted near sanctum.</p>
     <p>3. Observe silence in sacred zones like Chidambara Rahasyam area.</p>
     <p>4. Dress modestly and respect rituals.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Chidambaram, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Nataraja)</p>
     <p><span>Timings:</span> 6:00 AM - 12:00 PM, 5:00 PM - 10:00 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-},
-Murugan: {
-  name: "Palani Murugan Temple",
-  about: `
+      },
+      Murugan: {
+        name: "Palani Murugan Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Palani Murugan Temple is one of the six Arupadai Veedu temples of Lord Murugan, located atop the Sivagiri Hills. The temple is deeply spiritual and attracts millions of devotees every year, especially during Thaipusam.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Built on a 150-meter-high hill with 693 steps leading to the top.</p>
     <p>2. The main idol is made of Navapashanam, a rare combination of medicinal minerals.</p>
     <p>3. Rope car and winch are available for visitors who can't climb.</p>
     <p>4. The temple has inscriptions and bronze sculptures dating back centuries.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Thaipusam:</span> Most important festival with massive processions and rituals.</p>
     <p><span>Panguni Uthiram:</span> Celebrates the divine marriage of Murugan and Deivanai.</p>
     <p><span>Skanda Shashti:</span> Six-day festival celebrating Murugan's victory over demons.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Prefer early morning visits to avoid heat during the climb.</p>
     <p>2. Use rope car or winch if you're unable to walk up.</p>
     <p>3. Dress conservatively and avoid leather items.</p>
     <p>4. Avoid Thaipusam week if you dislike large crowds.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Palani, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Murugan</p>
     <p><span>Timings:</span> 5:45 AM - 9:00 PM</p>
     <p><span>Entry Fee:</span> Free (special darshan available)</p>
   `
-},
-jambukeshwarar: {
-  name: "Jambukeswarar Temple",
-  about: `
+      },
+      jambukeshwarar: {
+        name: "Jambukeswarar Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Jambukeswarar Temple, located in Tiruchirapalli (Trichy), is one of the Pancha Bhoota Sthalams, representing the element Water. It is dedicated to Lord Shiva and is known for its spiritual ambiance and sacred underground water stream.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. Built by the Cholas in the 2nd century AD, showcasing early Dravidian architecture.</p>
     <p>2. Features a sanctum where water constantly flows beneath the Shiva Lingam.</p>
     <p>3. Massive corridors, five concentric walls, and grand gopurams.</p>
     <p>4. Famous for its Akhilandeswari shrine, a form of Goddess Parvati.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Panguni Brahmotsavam:</span> The temple's biggest annual celebration with processions and rituals.</p>
     <p><span>Navaratri:</span> Grand celebrations for Goddess Akhilandeswari.</p>
     <p><span>Shivaratri:</span> All-night worship with devotees chanting and offering prayers.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Don't miss the underground sanctum where water flows naturally.</p>
     <p>2. Visit both the Shiva and Goddess shrines.</p>
     <p>3. Ideal visit time: early morning or evening.</p>
     <p>4. Modest/traditional attire is recommended.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Tiruchirapalli, Tamil Nadu</p>
     <p><span>Deities:</span> Lord Shiva (Jambukeswarar) and Goddess Akhilandeswari</p>
     <p><span>Timings:</span> 6:00 AM - 1:00 PM, 4:00 PM - 8:30 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-},annamalaiyar: {
-  name: "Annamalaiyar Temple",
-  about: `
+      }, annamalaiyar: {
+        name: "Annamalaiyar Temple",
+        about: `
     <h3>About the Temple</h3>
     <p>Annamalaiyar Temple in Tiruvannamalai is one of the largest temples in India, dedicated to Lord Shiva. It represents the Fire element (Agni) among the Pancha Bhoota Stalas. The temple is spiritually powerful and especially significant during the Karthigai Deepam festival.</p>
   `,
-  arch: `
+        arch: `
     <h3>Architectural Highlights:</h3>
     <p>1. The Rajagopuram (main tower) is 66 meters high — one of the tallest in India.</p>
     <p>2. Enormous temple complex covering 25 acres.</p>
     <p>3. Rich carvings on pillars, mandapams, and towers.</p>
     <p>4. Sacred mountain Arunachala behind the temple, considered Lord Shiva himself.</p>
   `,
-  festivals: `
+        festivals: `
     <h3>Festivals</h3>
     <p><span>Karthigai Deepam:</span> Grand celebration where a giant flame is lit atop Arunachala Hill.</p>
     <p><span>Pradosham:</span> Bimonthly ritual attracting thousands.</p>
     <p><span>Girivalam:</span> Monthly full-moon walk around the sacred hill (14 km), done barefoot by pilgrims.</p>
   `,
-  tips: `
+        tips: `
     <h3>Visitor Tips:</h3>
     <p>1. Visit during Karthigai Deepam for a stunning spiritual experience.</p>
     <p>2. Participate in Girivalam if you're visiting on full moon night.</p>
     <p>3. Start your visit early morning to beat the heat and crowd.</p>
     <p>4. Proper dress code is enforced inside the temple.</p>
   `,
-  location: `
+        location: `
     <h3>Temple Information</h3>
     <p><span>Location:</span> Tiruvannamalai, Tamil Nadu</p>
     <p><span>Deity:</span> Lord Shiva (Annamalaiyar)</p>
     <p><span>Timings:</span> 5:30 AM - 12:30 PM, 3:30 PM - 9:30 PM</p>
     <p><span>Entry Fee:</span> Free</p>
   `
-}
+      }
 
-}
-    
-function showTempleDetails(id) {
-  const temple = temples[id];
+    }
 
-  if (temple) {
-    document.body.style.overflow = "hidden"; // stop background scroll
+    function showTempleDetails(id) {
+      const temple = temples[id];
 
-    // update content as before...
-    document.getElementById("popup-name").innerHTML = temple.name;
-    document.getElementById("popup-about").innerHTML = temple.about;
-    document.getElementById("popup-arch").innerHTML = temple.arch;
-    document.getElementById("popup-festival").innerHTML = temple.festivals;
-    document.getElementById("popup-tips").innerHTML = temple.tips;
-    document.getElementById("popup-location").innerHTML = temple.location;
+      if (temple) {
+        document.body.style.overflow = "hidden"; // stop background scroll
 
-    document.querySelector(".popup1").style.display = "block";
-    document.querySelector(".overlay1").style.display = "block";
-  }
- 
-} 
+        // update content as before...
+        document.getElementById("popup-name").innerHTML = temple.name;
+        document.getElementById("popup-about").innerHTML = temple.about;
+        document.getElementById("popup-arch").innerHTML = temple.arch;
+        document.getElementById("popup-festival").innerHTML = temple.festivals;
+        document.getElementById("popup-tips").innerHTML = temple.tips;
+        document.getElementById("popup-location").innerHTML = temple.location;
 
-function closepopup() {
-  document.body.style.overflow = "auto"; // allow background scroll again
-  document.querySelector(".popup1").style.display = "none";
-  document.querySelector(".overlay1").style.display = "none";
-}
+        document.querySelector(".popup1").style.display = "block";
+        document.querySelector(".overlay1").style.display = "block";
+      }
 
-</script>
-    <script src="place.js"></script>
-    <script src="temple.js"></script>
+    }
+
+    function closepopup() {
+      document.body.style.overflow = "auto"; // allow background scroll again
+      document.querySelector(".popup1").style.display = "none";
+      document.querySelector(".overlay1").style.display = "none";
+    }
+
+  </script>
+  <script src="place.js"></script>
+  <script src="temple.js"></script>
 
 </body>
 
