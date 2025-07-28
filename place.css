@@ -202,6 +202,10 @@ section h2 {
     margin-bottom: 30px;
     height: 380px;
 }
+
+
+
+
 /* register */
 
 .register-form {
@@ -279,6 +283,8 @@ section h2 {
     margin-top: 60px;
 }
 
+
+
 .temple-card {
     flex-basis: 21%;
     margin-left: 18%;
@@ -308,6 +314,22 @@ section h2 {
 .temple-card p {
     color: red;
     padding-bottom: 5px;
+}
+.register button{
+    padding: 20px;
+    background: linear-gradient(to right, skyblue, navy);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-weight: 900;
+    box-shadow: 5px 10px 20px skyblue;
+    margin-bottom: 40px;
+    transition: 0.8s;
+    margin-left: 49%;
+}
+.register button:hover{
+    transform: scale(1.09);
 }
 
 .overlay1 {
