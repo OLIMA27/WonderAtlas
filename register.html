@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beach</title>
+  <title>Register</title>
   <link rel="stylesheet" href="place.css">
   <!--Font Awesome icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -85,16 +86,33 @@
   </form>
 
 
+<script>
+document.querySelector(".register-form").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  <script>
+  const formData = {
+    name: document.getElementById("name").value,
+    phone: document.getElementById("phone").value,
+    email: document.getElementById("email").value,
+    placeType: document.getElementById("place-type").value,
+    placeName: document.getElementById("place-name").value,
+    visitDate: document.getElementById("visit-date").value
+  };
 
-      var senddata=document.getElementById('send')
-    function register(){
-        alert("Registration successful! Thank you for registering.")
-    }
-  </script>
+  fetch("http://localhost:5000/api/register", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData)
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert(data.message);
+    document.querySelector(".register-form").reset();
+  })
+  .catch(err => console.error("Error:", err));
+});
+</script>
 
-  <script src="place.js"></script>
 </body>
 </html>
 
